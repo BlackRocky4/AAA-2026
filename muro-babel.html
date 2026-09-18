@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muro de Babel | Alzheimer Aprende y Actúa 2026</title>
+<meta name="description" content="Alzheimer Aprende y Actúa 2026: un programa para reconocer las señales, entender la enfermedad y actuar a tiempo frente a las demencias.">
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<!-- AOS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+<!-- Google Fonts: Poppins y Fraunces -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7SMK87RWYH"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-7SMK87RWYH');
+</script>
+
+
+<style>
+  .muro-band{ position:relative; height:auto!important;color: white!important;}
+  /* Ponentes List */
+  .speaker-item {
+    display: flex; align-items: center; gap: 1.2rem;
+    padding: 0.85rem 1.2rem; border-radius: var(--radius-md);
+    transition: all 0.3s ease; cursor: pointer;
+    background: rgba(255,255,255,0.1); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.3);
+  }
+  .speaker-item:hover {
+    background: rgba(255,255,255,0.15);
+    box-shadow: 0 4px 15px rgba(33,20,51,.08); transform: translateY(-3px);
+  }
+  .speaker-info h5 { color:white; }
+  .cargo {color: white!important;}
+  .muro-tag{
+    display:inline-flex; align-items:center; gap:.6rem;
+    color:#fff; font-family:'Poppins',sans-serif; font-weight:700; font-size:1.05rem; padding:.4rem 0;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  .muro-tag .num{
+    width:104px; height:34px; border-radius:20px;
+    background:rgba(255,255,255,.2); backdrop-filter:blur(4px);
+    border: 1px solid rgba(255,255,255,0.3);
+    display:flex; align-items:center; justify-content:center; font-size:.85rem;
+  }
+  .muro-3-sec { 
+    background: linear-gradient(rgba(140, 160, 134, 0.9), rgba(140, 160, 134, 0.95)), 
+                url('img/normalizacion.webp');
+    background-size: cover; background-position: center;
+  }
+
+</style>
+
+</head>
+<body>
+
+
+<!-- ============ NAV ============ -->
+<header class="aaa-nav" id="aaaNav">
+  <nav class="navbar navbar-expand-lg container">
+    <a class="navbar-brand aaa-logotype" href="index.html">
+      <img src="img/logo-aaa-2026-blanco.png" width="120px" alt="Logo" id="mainLogo">
+    </a>
+    
+    <button class="navbar-toggler d-flex d-lg-none align-items-center gap-1 glass-light border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú" style="border-radius: 999px;">
+      <span class="navbar-toggler-text d-lg-none ps-2">Menú</span>
+      <div class="d-flex flex-column justify-content-center pe-1">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </div>
+    </button>
+    
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link aaa-nav-link" href="directorio-aaa">Directorio Alzheimer</a></li>
+        <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="El día Lunes podrás acceder a esta sección">
+          <a class="nav-link aaa-nav-link" href="#" style="pointer-events: none; opacity: 0.5;">Material descargable</a>
+        </li>
+        <li class="nav-item"><a class="nav-link aaa-nav-link" href="mas-aaa">Más de AAA</a></li>
+        <li class="nav-item"><a class="nav-link aaa-nav-link" href="index.html#footer">Forma parte de AAA</a></li>
+        <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a class="btn-aaa-outline" href="programa-aaa2026.pdf">Programa</a></li>
+        <li class="nav-item me-lg-3 mb-2 mb-lg-0">
+          <a href="javascript:history.back()" class="btn" style="background-color: white; color: #723889; border: 2px solid #723889; border-radius: 999px; font-weight: 600; padding: 0.4rem 1.2rem; display: inline-flex; align-items: center; gap: 8px;">
+            <i class="fa-solid fa-arrow-left"></i> Regresar
+          </a>
+        </li>
+        
+        <li class="nav-item dropdown ms-lg-2 mt-3 mt-lg-0">
+          <a class="nav-link aaa-nav-link dropdown-toggle d-inline-flex align-items-center" href="#" id="hamburguesaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="d-lg-none me-2">Más opciones</span>
+            <i class="fa-solid fa-bars"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end mobile-scroll-dropdown glass-light" aria-labelledby="hamburguesaDropdown">
+            <li><a class="dropdown-item" href="index.html">Inicio</a></li>
+            <li><a class="dropdown-item" href="que-es-aaa">¿Qué es AAA?</a></li>
+            <li><a class="dropdown-item" href="index.html#muros">Los muros de las demencias</a></li>
+            <li><a class="dropdown-item" href="muro-normalizacion">Muro 1</a></li>
+            <li><a class="dropdown-item" href="muro-paraque">Muro 2</a></li>
+            <li><a class="dropdown-item" href="muro-babel">Muro 3</a></li>
+            <li><a class="dropdown-item" href="muro-estigma-miedo">Muro 4</a></li>
+            <li><a class="dropdown-item" href="mas-aaa">Más de AAA</a></li>
+            <li><a class="dropdown-item" href="material-descargable">Matrial descargable</a></li>
+            <li><a class="dropdown-item" href="directorio-aaa">Directorio AAA</a></li>
+            <li><a class="dropdown-item" href="index.html#footer">Forma parte de AAA</a></li>
+            <li><a class="dropdown-item" href="index.html#aliados">Aliados</a></li>
+            <li><a class="dropdown-item" href="index.html#footer">Contacto</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+<!-- ============ MURO 1: TERRACOTA ============ -->
+<section class="muro-band muro-3-sec" id="barrera" style="padding-top: 70px;">
+  <div class="muro-head-bar">
+    <div class="container">
+      <span class="muro-tag"><span class="num">10:00 hrs</span>  Miércoles 23 de septiembre 2026</span>
+    </div>
+  </div>
+  <div class="container section-sm position-relative">
+    <div class="row align-items-center g-5 mb-5">
+      <!-- Lado Izquierdo: Video -->
+      <div class="col-lg-7" data-aos="fade-up">
+        <div class="video-card h-100" style="background-image: url(img/proximo.webp);background-size: cover;">
+          <span class="play-btn"><i class="fa-solid fa-play"></i></span>
+          <h3 style="position:absolute;top: 60%;text-align: center;font-weight: 700;color: white;">Podras verlo el<br><span class="font-accent">Miércoles 23</span></h3>
+        </div>
+      </div>
+      <!-- Lado Derecho: Lista de Ponentes -->
+      <div class="col-lg-5" data-aos="fade-down">
+        <div class="d-flex flex-column gap-2">
+          <h2 style="font-size:clamp(1.8rem,3vw,2.6rem); margin-bottom: 20px;">Cuando el <span class="font-accent">lenguaje médico</span> se vuelve barrera</h2>
+          <!-- Ponente 1 -->
+          <div class="speaker-item" data-bs-toggle="modal" data-bs-target="#marisol">
+            <img src="img/ponentes/marisol.webp" alt="Ponente 1" class="speaker-img">
+            <div class="speaker-info">
+              <h5 class="mb-0 font-accent">Dra. Marisol Valdés Escárcega</h5>
+              <span class="small cargo fw-semibold">Especialista en geriatría </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-9 col-12">
+        <p class="mb-2">La alfabetización en salud no es responsabilidad únicamente de quien recibe la información. También existe una alfabetización en salud organizativa, es decir, la capacidad de las instituciones para comunicar de manera que las personas puedan encontrar, comprender y utilizar la información y los servicios que necesitan para tomar decisiones sobre su salud.</p>
+        <p class="mb-2">Por eso, cuando una persona no comprende su diagnóstico, un tratamiento o las indicaciones que recibe, no todo depende de ella. También importa cómo el sistema de salud comunica esa información.</p>
+        <p class="mb-2">Esta barrera tiene consecuencias. Las personas que salen del hospital sin comprender bien su diagnóstico o sus medicamentos tienen mayor probabilidad de volver a ser hospitalizadas. Además, una alfabetización en salud limitada se relaciona con peores resultados de salud y mayores costos médicos.
+        La solución no es simplificar la medicina, sino traducirla. Comunicar la información de forma clara, coherente y accesible para que cada persona pueda participar realmente en las decisiones sobre su salud.</p>
+        <p class="mb-2">Pedir que algo se explique de otra manera o repetir lo que se entendió para confirmarlo no es una molestia, forma parte de una buena comunicación y de un cuidado que se construye entre pacientes y profesionales de la salud.</p>
+        
+        <p class="mb-2" style="font-size: 10px;">Fuentes:
+        <br>American Heart Association. (2023). ¿Qué dijo el médico? Darle un impulso a la alfabetización en salud no depende solo del paciente. 
+        <br>Eakin Respiratory. (2024). La alfabetización en salud: una guía para mejorar la comunicación con el paciente. 
+        <br>American Heart Association. (2023). ¿Qué dijo el médico? Darle un impulso a la alfabetización en salud no depende solo del paciente. 
+        <br>Meer. (2024). ¿Cómo aplicar el lenguaje claro en el ámbito de la salud? </p>
+      </div>
+      <div class="col-lg-3 col-12 text-center">
+        <a href="img/complementario/medicobarrera.jpg" download><img src="img/complementario/medicobarrera.jpg" width="100%" style="border-radius: 20px;"></a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ MURO 1: TERRACOTA ============ -->
+<section class="muro-band muro-3-sec" id="biomarcador">
+  <div class="muro-head-bar">
+    <div class="container">
+      <span class="muro-tag"><span class="num">13:00 hrs</span>  Miércoles 23 de septiembre 2026</span>
+    </div>
+  </div>
+  <div class="container section-sm position-relative">
+    <div class="row align-items-center g-5 mb-5">
+      <!-- Lado Izquierdo: Video -->
+      <div class="col-lg-7" data-aos="fade-up">
+        <div class="video-card h-100" style="background-image: url(img/proximo.webp);background-size: cover;">
+          <span class="play-btn"><i class="fa-solid fa-play"></i></span>
+          <h3 style="position:absolute;top: 60%;text-align: center;font-weight: 700;color: white;">Podras verlo el<br><span class="font-accent">Miércoles 23</span></h3>
+        </div>
+      </div>
+      <!-- Lado Derecho: Lista de Ponentes -->
+      <div class="col-lg-5" data-aos="fade-down">
+        <div class="d-flex flex-column gap-2">
+          <h2 style="font-size:clamp(1.8rem,3vw,2.6rem); margin-bottom: 20px;">¿Qué es un <span class="font-accent">biomarcador</span> y para qué sirve?</h2>
+          <!-- Ponente 1 -->
+          <div class="speaker-item" data-bs-toggle="modal" data-bs-target="#erika">
+            <img src="img/ponentes/erika.webp" alt="Ponente 1" class="speaker-img">
+            <div class="speaker-info">
+              <h5 class="mb-0 font-accent">Dra. Erika Mariana Longoria Ibarrola</h5>
+              <span class="small cargo text-muted fw-semibold">Especialista en demencias</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-9 col-12">
+        <p class="mb-2">Un biomarcador es una señal que puede medirse en el cuerpo y que permite identificar cambios específicos relacionados con una enfermedad. En el caso del Alzheimer, puede encontrarse en la sangre, en el líquido que rodea el cerebro o a través de estudios de imagen cerebral.</p>
+        <p class="mb-2">Los principales biomarcadores del Alzheimer están relacionados con dos proteínas: la beta-amiloide y la tau. Ambas pueden acumularse de manera anormal en el cerebro y, actualmente, es posible estudiarlas mediante una punción lumbar, análisis de sangre —como la p-tau217— o estudios de imagen como la tomografía por emisión de positrones (PET).</p>
+        <p class="mb-2">Durante décadas, la confirmación definitiva del Alzheimer solo podía hacerse después de la muerte, mediante el análisis del cerebro durante una autopsia. Los biomarcadores han permitido avanzar hacia otra realidad. Hoy podemos identificar en una persona viva cambios biológicos relacionados con la enfermedad, lo que ha contribuido a mejorar la precisión del diagnóstico.</p>
+        <p class="mb-2">Esto es especialmente importante porque los cambios relacionados con el Alzheimer pueden comenzar muchos años antes de que aparezcan los primeros síntomas. Por ejemplo, el depósito de beta-amiloide en el cerebro puede preceder hasta en 20 años a las primeras manifestaciones clínicas.</p>
+        <p class="mb-2">Para las familias, esto significa que la enfermedad puede estar desarrollándose mucho antes de que los cambios sean evidentes. Los biomarcadores pueden ayudar a identificar ese proceso y aportar información valiosa para confirmar o descartar una sospecha diagnóstica.Pero un biomarcador no sustituye una evaluación clínica. Sus resultados deben interpretarse junto con la historia de la persona, sus síntomas y la valoración médica. El diagnóstico del Alzheimer no depende de una sola prueba, sino de integrar toda esa información.</p>
+        
+        <p class="mb-2" style="font-size: 10px;">Fuentes:
+        <br>National Institute on Aging. (2023). What are biomarkers? U.S. Department of Health and Human Services.
+        <br>Alzheimer's Association. (2024). Biomarkers for Alzheimer's disease. 
+        <br>Jack, C. R., Jr., et al. (2018). NIA-AA research framework: Toward a biological definition of Alzheimer's disease. Alzheimer's & Dementia, 14(4), 535–562. 
+        <br>National Institute on Aging. (2023). What happens to the brain in Alzheimer's disease? U.S. Department of Health and Human Services.</p>
+      </div>
+      <div class="col-lg-3 col-12 text-center">
+        <a href="img/complementario/biomarcadores.jpg" download><img src="img/complementario/biomarcadores.jpg" width="100%" style="border-radius: 20px;"></a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="muro-band muro-3-sec" id="imagen">
+  <div class="muro-head-bar">
+    <div class="container">
+      <span class="muro-tag"><span class="num">16:00 hrs</span>  Miércoles 23 de septiembre 2026</span>
+    </div>
+  </div>
+  <div class="container section-sm position-relative">
+    <div class="row align-items-center g-5 mb-5">
+      <!-- Lado Izquierdo: Video -->
+      <div class="col-lg-7" data-aos="fade-up">
+        <div class="video-card h-100" style="background-image: url(img/proximo.webp);background-size: cover;">
+          <span class="play-btn"><i class="fa-solid fa-play"></i></span>
+          <h3 style="position:absolute;top: 60%;text-align: center;font-weight: 700;color: white;">Podras verlo el<br><span class="font-accent">Miércoles 23</span></h3>
+        </div>
+      </div>
+      <!-- Lado Derecho: Lista de Ponentes -->
+      <div class="col-lg-5" data-aos="fade-down">
+        <div class="d-flex flex-column gap-2">
+          <h2 style="font-size:clamp(1.8rem,3vw,2.6rem); margin-bottom: 20px;"><span class="font-accent">Estudios de imagen:</span> qué muestran, qué no, y cómo orientan el tratamiento</h2>
+          <!-- Ponente 1 -->
+          <div class="speaker-item" data-bs-toggle="modal" data-bs-target="#christian">
+            <img src="img/ponentes/christian.webp" alt="Ponente 1" class="speaker-img">
+            <div class="speaker-info">
+              <h5 class="mb-0 font-accent">Dr. Christian Omar Toledo Larriva</h5>
+              <span class="small cargo text-muted fw-semibold">Especialista en geriatría</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-9 col-12">
+        <p class="mb-2">Los estudios de imagen permiten observar qué está pasando en el cerebro y son una herramienta importante en la evaluación de las demencias. Existen dos grandes tipos: los estudios estructurales, como la tomografía computarizada (TC) y la resonancia magnética (RM), que muestran la estructura del cerebro; y los estudios funcionales, como el PET, que permiten observar su actividad o identificar determinados depósitos de proteínas.</p>
+        <p class="mb-2">La tomografía se utiliza principalmente para descartar otras posibles causas de los cambios cognitivos, como un tumor o las secuelas de un accidente cerebrovascular. La resonancia magnética, además, puede mostrar cambios en la estructura del cerebro, como la reducción de volumen en algunas regiones, entre ellas el hipocampo, que puede ser característica de ciertos tipos de demencia.</p>
+        <p class="mb-2">Pero hay algo que muchas familias no saben: en las primeras etapas del Alzheimer, una resonancia magnética puede verse completamente normal. Un resultado “normal” no significa necesariamente que la enfermedad esté descartada. Además, la atrofia cerebral puede aparecer en diferentes enfermedades y también como parte del envejecimiento, por lo que no puede interpretarse de manera aislada.</p>
+        <p class="mb-2">Por eso, el papel de las imágenes ha ido cambiando. Hoy existen estudios que, además de mostrar la estructura del cerebro, pueden aportar información sobre procesos específicos de la enfermedad, como los depósitos de beta-amiloide y tau mediante PET.</p>
+        <p class="mb-2">La imagen es una pieza más del rompecabezas. Para llegar a un diagnóstico, sus resultados deben interpretarse junto con la historia de la persona, sus síntomas, la valoración clínica y, cuando es necesario, otros estudios como los biomarcadores en sangre o en líquido cefalorraquídeo. cefalorraquídeo.</p>
+        
+        <p class="mb-2" style="font-size: 10px;">Fuentes:
+        <br>National Institute on Aging. (2023). Brain imaging and biomarkers. U.S. Department of Health and Human Services. 
+        <br>Alzheimer's Association. (2024). Medical tests for diagnosing Alzheimer's. 
+        <br>Mayo Clinic Staff. (2023). Alzheimer's disease: Diagnosis. Mayo Foundation for Medical Education and Research. 
+        <br>Jack, C. R., Jr., et al. (2018). NIA-AA research framework: Toward a biological definition of Alzheimer's disease. Alzheimer's & Dementia, 14(4), 535–562. 
+        </p>
+      </div>
+      <div class="col-lg-3 col-12 text-center">
+        <a href="img/complementario/estudiosdeimagen.jpg" download><img src="img/complementario/estudiosdeimagen.jpg" width="100%" style="border-radius: 20px;"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="muro-band muro-3-sec" id="perdido">
+  <div class="muro-head-bar">
+    <div class="container">
+      <span class="muro-tag"><span class="num">10:00 hrs</span>  Jueves 24 de septiembre 2026</span>
+    </div>
+  </div>
+  <div class="container section-sm position-relative">
+    <div class="row align-items-center g-5 mb-5">
+      <!-- Lado Izquierdo: Video -->
+      <div class="col-lg-7" data-aos="fade-up">
+        <div class="video-card h-100" style="background-image: url(img/proximo.webp);background-size: cover;">
+          <span class="play-btn"><i class="fa-solid fa-play"></i></span>
+          <h3 style="position:absolute;top: 60%;text-align: center;font-weight: 700;color: white;">Podras verlo el<br><span class="font-accent">Jueves 24</span></h3>
+        </div>
+      </div>
+      <!-- Lado Derecho: Lista de Ponentes -->
+      <div class="col-lg-5" data-aos="fade-down">
+        <div class="d-flex flex-column gap-2">
+          <h2 style="font-size:clamp(1.8rem,3vw,2.6rem); margin-bottom: 20px;"><span class="font-accent">De sentirse perdido</span> a participar activamente en las decisiones médicas</h2>
+          <!-- Ponente 1 -->
+          <div class="speaker-item" data-bs-toggle="modal" data-bs-target="#emilia">
+            <img src="img/ponentes/emilia.webp" alt="Ponente 1" class="speaker-img">
+            <div class="speaker-info">
+              <h5 class="mb-0 font-accent">Dra. Emilia Chino Hernández</h5>
+              <span class="small cargo text-muted fw-semibold">Especialista en geriatría</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-9 col-12">
+        <p class="mb-2">Durante mucho tiempo, ir al doctor significaba escuchar lo que el médico decía y seguirlo sin muchas preguntas. Hoy eso está cambiando: cada vez más, las decisiones de salud se toman entre el médico, el paciente y su familia, no solo de un lado.</p>
+        <p class="mb-2">Esto es especialmente cierto en el Alzheimer, donde muchas veces hay más de un camino a seguir, y quien vive con el diagnóstico —junto con quien lo acompaña— tiene mucho que decir sobre cuál conviene más. No se trata de que el médico deje de guiar, sino de que la familia entienda las opciones, sus riesgos y beneficios, y participe en la decisión final.</p>
+        <p class="mb-2">¿Por qué importa esto? Porque cuando una familia entiende lo que está pasando y siente que su opinión cuenta, se reduce la ansiedad, mejora la relación con el equipo médico, y es más fácil seguir el tratamiento acordado. Y lo mejor: no se necesita más tiempo de consulta para lograrlo, solo una conversación más abierta.</p>
+        <p class="mb-2">Si sales de una cita sin saber bien cuáles son tus opciones, siempre puedes preguntar: ¿qué otras alternativas hay, y qué implica cada una? Esa pregunta, tan simple, es el corazón de la toma de decisiones compartida.</p>
+        
+        <p class="mb-2" style="font-size: 10px;">Fuentes:
+        <br>MedlinePlus. (2024). Toma de decisiones compartida. Biblioteca Nacional de Medicina de EE. UU. 
+        <br>FAIR Health. (2024). Toma de decisiones compartida: Enfermedad de Alzheimer. 
+        <br>PyDeSalud. (2020). Toma de decisiones compartida. 
+        </p>
+      </div>
+      <div class="col-lg-3 col-12 text-center">
+        <a href="img/complementario/participar activamente.jpg" download><img src="img/complementario/participar activamente.jpg" width="100%" style="border-radius: 20px;"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ============ FOOTER ============ -->
+<footer class="pt-5 pb-4">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-6" style="margin: auto 0px;">
+        <h2>¿Quieres formar parte de Alzheimer Aprende y Actúa?</h2>
+        <p>Escríbenos por cualquiera de estos canales y te compartimos cómo sumarte como aliado, ponente o sede.</p>
+      </div>
+      <div class="col-lg-4 d-flex flex-column align-items-lg-end gap-3" style="margin: auto 0px;">
+        <div class="d-flex gap-2 mb-5">
+          <a href="#" class="back-top" style="padding: 10px;"><i class="fa-solid fa-globe" style="margin: 10px;"></i>Alzheimer México</a>
+          <a href="#" class="back-top" style="padding: 10px;"><i class="fa-solid fa-heart-pulse" style="margin: 10px;"></i>Red Alzheimer</a>
+        </div>
+      </div>
+      <div class="col-lg-2 d-flex flex-column align-items-lg-end gap-3" style="margin: auto 0px;">
+        <div class="d-flex gap-2 mb-5">
+          <a href="https://wa.me/525525152218" class="back-top" style="padding: 10px;"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.facebook.com/alzheimermexico/" class="back-top" style="padding: 10px;"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/alzheimermex/" class="back-top" style="padding: 10px;"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@alzheimermx/" class="back-top" style="padding: 10px;"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr style="border-color:rgba(255,255,255,.1); margin:32px 0 16px;">
+    <p class="footer-fine mb-0">Sitio desarrollado por 3Clue · v1.0 · 2026 · Alzheimer México, A.C. Todos los derechos reservados. <a href="aviso-de-privacidad">Aviso de privacidad.</a> <a href="#">Términos de uso.</a></p>
+  </div>
+</footer>
+
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/525525152218" class="wa-float" aria-label="Escríbenos por WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+
+<!-- ============ MODALES DE PONENTES ============ -->
+<!-- Modal Ponente 1 -->
+<div class="modal fade" id="marisol" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <img src="img/ponentes/marisol.webp" width="200" height="200" class="rounded-circle" style="object-fit:cover; border:2px solid var(--aaa-teal);">
+          <div>
+            <h5 class="mb-0 font-accent" style="color:var(--aaa-purple-dark);">Dra. Marisol Valdés Escárcega</h5>
+              <span class="small fw-semibold">Especialista en geriatría </span>
+          </div>
+        </div>
+        <p class="small">Médica Geriatra certificada, coordinadora de la Clínica del Adulto Mayor Edad de Oro en Médica Sur, con amplia experiencia en valoración geriátrica integral</p>
+        <p>Médica Geriatra certificada, coordinadora de la Clínica del Adulto Mayor Edad de Oro en Médica Sur y responsable de la Clínica de Geriatría del CIDyT. Con amplia experiencia en valoración geriátrica integral, síndromes geriátricos, rehabilitación, nutrición, salud mental y atención interdisciplinaria, su labor se centra en preservar la funcionalidad, autonomía y calidad de vida de las personas mayores. Ha participado como ponente en simposios sobre Alzheimer y envejecimiento, abordando diagnóstico diferencial, tratamientos farmacológicos y no farmacológicos, así como aspectos psicosociales del cuidado. Comprometida con la atención integral y la docencia, impulsa modelos de cuidado que promueven un envejecimiento digno, saludable y activo desde la práctica clínica y académica.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Ponente 2 -->
+<div class="modal fade" id="erika" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <img src="img/ponentes/erika.webp" width="200" height="200" class="rounded-circle" style="object-fit:cover; border:2px solid var(--aaa-teal);">
+          <div>
+            <h5 class="mb-0 font-accent" style="color:var(--aaa-purple-dark);">Dra. Erika Mariana Longoria Ibarrola</h5>
+              <span class="small text-muted fw-semibold">Especialista en demencias</span>
+          </div>
+        </div>
+        <p class="small">Médica Psiquiatra especialista en Envejecimiento Cognitivo y Demencias, coordinadora del laboratorio de demencias del Instituto Nacional de Neurología y Neurocirugía</p>
+        <p>Médica Psiquiatra y Especialista en Envejecimiento Cognitivo y Demencias. Adscrita a la clínica de demencias del Instituto Nacional de Neurología y Neurocirugía Manuel Velasco Suárez (INNNMVS), coordina el laboratorio de demencias y es Senior Atlantic Fellow del Global Brain Health Institute. Profesora de pregrado en la UNAM y la Universidad Anáhuac, ha impartido cursos sobre diagnóstico, clasificación y manejo farmacológico de demencias. Ha participado en redes internacionales como 10/66, DIAN y ReDLat y cursado fellowships en UCSF y Houston Methodist Neurological Institute. Su investigación abarca demencias de inicio temprano, frontotemporales, priónicas y Alzheimer.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Ponente 3 -->
+<div class="modal fade" id="christian" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <img src="img/ponentes/christian.webp" width="200" height="200" class="rounded-circle" style="object-fit:cover; border:2px solid var(--aaa-teal);">
+          <div>
+            <h5 class="mb-0 font-accent" style="color:var(--aaa-purple-dark);">Dr. Christian Omar Toledo Larriva</h5>
+              <span class="small text-muted fw-semibold">Especialista en geriatría</span>
+          </div>
+        </div>
+        <p class="small">Médico cirujano y especialista en geriatría, enfocado en el cuidado integral y salud de las personas adultas mayores.</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Ponente 4 -->
+<div class="modal fade" id="emilia" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <img src="img/ponentes/emilia.webp" width="200" height="200" class="rounded-circle" style="object-fit:cover; border:2px solid var(--aaa-teal);">
+          <div>
+            <h5 class="mb-0 font-accent" style="color:var(--aaa-purple-dark);">Dra. Emilia Chino Hernández</h5>
+              <span class="small  text-muted fw-semibold">Especialista en geriatría</span>
+          </div>
+        </div>
+        <p class="small">Médica Geriatra con formación en Salud Pública, especializada en el diseño de servicios de cuidado integral para adultos mayores con dependencia funcional</p>
+        <p>Médica Geriatra con formación en Salud Pública, especializada en el cuidado integral de personas mayores. Cuenta con experiencia en el diseño e implementación de servicios para adultos mayores con dependencia funcional, incluyendo el primer centro de día en una institución de seguridad social en América Latina y el Caribe. . Su enfoque se centra en promover un envejecimiento saludable y en acompañar a las personas mayores y sus familias en este proceso.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, once: true, offset: 60 });
+
+  // Elementos de la navegación
+  const nav = document.getElementById('aaaNav');
+  const mainLogo = document.getElementById('mainLogo');
+  
+  // Nav solid on scroll y cambio de Logo
+  const onScroll = () => {
+    if (window.scrollY > 40) {
+      nav.classList.add('is-solid');
+      mainLogo.src = 'img/logo-aaa-2026.png'; // Logo oscuro al hacer scroll
+    } else {
+      nav.classList.remove('is-solid');
+      mainLogo.src = 'img/logo-aaa-2026-blanco.png'; // Logo blanco en la parte superior
+    }
+  };
+  
+  document.addEventListener('scroll', onScroll);
+  onScroll();
+
+  // Close mobile menu after clicking a link (excluding dropdown toggles)
+  document.querySelectorAll('#navMenu a:not(.dropdown-toggle)').forEach(link => {
+    link.addEventListener('click', () => {
+      const menu = document.getElementById('navMenu');
+      if (menu.classList.contains('show')) {
+        bootstrap.Collapse.getOrCreateInstance(menu).hide();
+      }
+    });
+  });
+  // Inicializar tooltips de Bootstrap
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+</body>
+</html>

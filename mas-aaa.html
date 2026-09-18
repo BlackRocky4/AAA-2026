@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alzheimer Aprende y Actúa 2026 · Derribando los muros de las demencias</title>
+<meta name="description" content="Alzheimer Aprende y Actúa 2026: un programa para reconocer las señales, entender la enfermedad y actuar a tiempo frente a las demencias.">
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<!-- AOS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+<!-- Google Fonts: Poppins y Fraunces -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7SMK87RWYH"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-7SMK87RWYH');
+</script>
+<style>
+  .bordes{
+    border-radius: 15px;
+  }
+</style>
+
+
+
+</head>
+<body>
+
+
+<!-- ============ NAV ============ -->
+<header class="aaa-nav" id="aaaNav">
+  <nav class="navbar navbar-expand-lg container">
+    <a class="navbar-brand aaa-logotype" href="index.html">
+      <img src="img/logo-aaa-2026-blanco.png" width="120px" alt="Logo" id="mainLogo">
+    </a>
+    
+    <button class="navbar-toggler d-flex d-lg-none align-items-center gap-1 glass-light border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú" style="border-radius: 999px;">
+      <span class="navbar-toggler-text d-lg-none ps-2">Menú</span>
+      <div class="d-flex flex-column justify-content-center pe-1">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </div>
+    </button>
+    
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link aaa-nav-link" href="directorio-aaa">Directorio Alzheimer</a></li>
+        <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="El día Lunes podrás acceder a esta sección">
+          <a class="nav-link aaa-nav-link" href="#" style="pointer-events: none; opacity: 0.5;">Material descargable</a>
+        </li>
+        <li class="nav-item"><a class="nav-link aaa-nav-link" href="mas-aaa">Más de AAA</a></li>
+        <li class="nav-item"><a class="nav-link aaa-nav-link" href="index.html#footer">Forma parte de AAA</a></li>
+        <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a class="btn-aaa-outline" href="programa-aaa2026.pdf">Programa</a></li>
+        <li class="nav-item me-lg-3 mb-2 mb-lg-0">
+          <a href="javascript:history.back()" class="btn" style="background-color: white; color: #723889; border: 2px solid #723889; border-radius: 999px; font-weight: 600; padding: 0.4rem 1.2rem; display: inline-flex; align-items: center; gap: 8px;">
+            <i class="fa-solid fa-arrow-left"></i> Regresar
+          </a>
+        </li>
+        
+        <li class="nav-item dropdown ms-lg-2 mt-3 mt-lg-0">
+          <a class="nav-link aaa-nav-link dropdown-toggle d-inline-flex align-items-center" href="#" id="hamburguesaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="d-lg-none me-2">Más opciones</span>
+            <i class="fa-solid fa-bars"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end mobile-scroll-dropdown glass-light" aria-labelledby="hamburguesaDropdown">
+            <li><a class="dropdown-item" href="index.html">Inicio</a></li>
+            <li><a class="dropdown-item" href="que-es-aaa">¿Qué es AAA?</a></li>
+            <li><a class="dropdown-item" href="index.html#muros">Los muros de las demencias</a></li>
+            <li><a class="dropdown-item" href="muro-normalizacion">Muro 1</a></li>
+            <li><a class="dropdown-item" href="muro-paraque">Muro 2</a></li>
+            <li><a class="dropdown-item" href="muro-babel">Muro 3</a></li>
+            <li><a class="dropdown-item" href="muro-estigma-miedo">Muro 4</a></li>
+            <li><a class="dropdown-item" href="mas-de-aaa">Más de AAA</a></li>
+            <li><a class="dropdown-item" href="material-descargable">Matrial descargable</a></li>
+            <li><a class="dropdown-item" href="directorio-aaa">Directorio AAA</a></li>
+            <li><a class="dropdown-item" href="index.html#footer">Forma parte de AAA</a></li>
+            <li><a class="dropdown-item" href="index.html#aliados">Aliados</a></li>
+            <li><a class="dropdown-item" href="index.html#footer">Contacto</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio" style="max-height: 10vh!important;min-height: 10vh;">
+  <div class="hero-grain"></div>
+  <div class="hero-grain"></div>
+  <div class="container hero-content">
+  </div>
+  <a href="#que-es" class="scroll-cue" aria-label="Bajar a la siguiente sección">
+    <i class="fa-solid fa-chevron-down fa-lg"></i>
+  </a>
+</section>
+
+<section class="section mt-5" id="primeros-anos">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-9" data-aos="fade-up">
+        <h2 class="mb-4">Alzheimer Aprende y Actúa 2026<span class="font-accent"><br>Evento presencial</span><br>19 de Septiembre 2026</h2>
+        <p class="mb-2">El sábado 19 de septiembre de 2026, de 9:00 a 14:00 horas, te esperamos en el Foro al aire libre Las Arboledas, dentro del Parque Las Arboledas, alcaldía Benito Juárez, Ciudad de México, para vivir juntos el evento presencial de Alzheimer Aprende y Actúa 2026.</p>
+        <p class="mb-2">Habrá un circuito de salud con evaluaciones completamente gratuitas —cognitivas, nutricionales, físicas, de factores de riesgo y psicológicas—, además de orientación gerontológica gratuita, un evento cultural y actividades pensadas para toda la familia.</p>
+        <p class="mb-5">No necesitas tener un diagnóstico ni un familiar con demencia para participar: este espacio es para cuidadores, familias y público en general que quiera aprender, prevenir y actuar a tiempo</p>
+      </div>
+    </div>
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-3"><img src="img/carteles/Cartel-presencial-aaa2026.jpg" height="400px" style="margin-right: 20px;" class="bordes"></div>
+      <div class="col-lg-2"><a href="img/carteles/Programa-general.jpg" download=""><img src="img/carteles/Programa-general.jpg" height="400px"></a></div>
+      <div class="col-lg-6"><div class="video-card h-100">
+          <span class="play-btn"><i class="fa-solid fa-play"></i></span>
+        </div></div>
+    </div>
+
+  </div>
+</section>
+<section class="section" id="primeros-anos" style="padding-top: 0px;">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-9" data-aos="fade-up">
+        <h2 class="mb-4">Monumentos<span class="font-accent"> iluminados</span></h2>
+        <p class="mb-2">El 21 de septiembre de 2026, a partir de las 7:00 pm, la Ciudad de México se ilumina de morado en conmemoración del Día Mundial del Alzheimer. En conjunto con la Secretaría de Obras y Servicios de la Ciudad de México, 23 monumentos emblemáticos de la ciudad se suman a este gesto colectivo.</p>
+        <p class="mb-2">Que la demencia no viva en la oscuridad: cada monumento iluminado es un recordatorio de que reconocer, comprender y acompañar también es actuar.</p>
+        <p class="mb-5">Sigue el recorrido completo de monumentos participantes y súmate a la conversación con el hashtag #AprendeYActua2026.</p>
+      </div>
+    </div>
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-3" style="margin: auto 0;"><img src="img/carteles/Cartel-iluminacion-aaa2026.jpg" height="400px" style="margin-right: 20px;" class="bordes"></div>
+      <div class="col-lg-6" style="margin: auto 0;">
+        <h3>Lista de monumentos que serán iluminados </h3>
+        <p>Plaza de la República, la Fuente de la República, Metrópoli, el Joven de Amajac, la Escultura Caballito, la Fuente Bicentenario, el Navegante, el Cocodrilo de Leonora Carrington, Cuitláhuac, el León Rojo, la Glorieta de Simón Bolívar, el Obelisco, Fuente de Simón Bolívar, el Monumento a Álvaro Obregón, el Distribuidor Vial San Jerónimo, la Calzada Flotante, el Cactus San Jerónimo, la Fuente Monumental, la Puerta Euclidiana, las Fuentes de Cibeles, la Fuente de Víboras, el Memorial del Colegio Rébsamen, el Encuentro y la Fuente de Vaqueritos.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="pt-5 pb-4" id="footer">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-6" style="margin: auto 0px;">
+        <h2>¿Quieres formar parte de Alzheimer Aprende y Actúa?</h2>
+        <p>Escríbenos por cualquiera de estos canales y te compartimos cómo sumarte como aliado, ponente o sede.</p>
+      </div>
+      <div class="col-lg-4 d-flex flex-column align-items-lg-end gap-3" style="margin: auto 0px;">
+        <div class="d-flex gap-2 mb-5">
+          <a href="#" class="back-top" style="padding: 10px;"><i class="fa-solid fa-globe" style="margin: 10px;"></i>Alzheimer México</a>
+          <a href="#" class="back-top" style="padding: 10px;"><i class="fa-solid fa-heart-pulse" style="margin: 10px;"></i>Red Alzheimer</a>
+        </div>
+      </div>
+      <div class="col-lg-2 d-flex flex-column align-items-lg-end gap-3" style="margin: auto 0px;">
+        <div class="d-flex gap-2 mb-5">
+          <a href="https://wa.me/525525152218" class="back-top" style="padding: 10px;"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.facebook.com/alzheimermexico/" class="back-top" style="padding: 10px;"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/alzheimermex/" class="back-top" style="padding: 10px;"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@alzheimermx/" class="back-top" style="padding: 10px;"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr style="border-color:rgba(255,255,255,.1); margin:32px 0 16px;">
+    <p class="footer-fine mb-0">Sitio desarrollado por 3Clue · v1.0 · 2026 · Alzheimer México, A.C. Todos los derechos reservados. <a href="aviso-de-privacidad">Aviso de privacidad.</a> <a href="#">Términos de uso.</a></p>
+  </div>
+</footer>
+
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/525525152218" class="wa-float" aria-label="Escríbenos por WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+
+<!-- ============ MODALES DE PONENTES ============ -->
+<!-- Modal Ponente 1 -->
+<div class="modal fade" id="ponenteModal1" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <img src="img/user.png" width="80" height="80" class="rounded-circle" style="object-fit:cover; border:2px solid var(--aaa-teal);">
+          <div>
+            <h5 class="mb-0 font-accent" style="color:var(--aaa-purple-dark);">Mtro. Marco A. Murillo</h5>
+            <span class="text-muted small fw-semibold">Anfitrión</span>
+          </div>
+        </div>
+        <p class="small">Destacado directivo del sector social en México, especializado en el ámbito gerontológico y la atención integral a personas con Alzheimer y otras condiciones neurodegenerativas. Actualmente se desempeña como Presidente del Patronato de Alzheimer México, I.A.P. y Tesorero de la Federación Mexicana de Alzheimer (FEDMA). Su labor abarca la sostenibilidad institucional, procuración de fondos, alianzas estratégicas y la defensa de los derechos de las personas con demencia y sus cuidadores a nivel nacional.</p>
+        <p class="small"><i class="fa-solid fa-envelope" style="margin: 10px;"></i><a href="mailto:patronato@alzmx.org.mx" style="color: var(--aaa-purple);">patronato@alzmx.org.mx</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Ponente 2 -->
+<div class="modal fade" id="ponenteModal2" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <img src="img/user.png" width="80" height="80" class="rounded-circle" style="object-fit:cover; border:2px solid var(--aaa-teal);">
+          <div>
+            <h5 class="mb-0 font-accent" style="color:var(--aaa-purple-dark);">LFT. María Guadalupe Saldaña</h5>
+            <span class="text-muted small fw-semibold">Moderador</span>
+          </div>
+        </div>
+        <p class="small">Licenciada en Fisioterapia egresada de la Benemérita Universidad Autónoma de Puebla (BUAP) y actual Coordinadora de Fisioterapia en Alzheimer México, I.A.P. Es miembro de la Academia Mexicana de Geriatría y docente de Práctica Clínica en Geriatría de la Licenciatura en Fisioterapia en la Facultad de Medicina de la UNAM. Cuenta con amplia experiencia en instituciones públicas y privadas de atención al adulto mayor, así como formación especializada en Geriatría avalada por el Instituto Nacional de Geriatría (INGER) y el Consejo Mexicano de Geriatría, además de capacitación en rehabilitación cardiopulmonar por el Centro FISICOL.</p>
+        <p class="small"><i class="fa-solid fa-envelope" style="margin: 10px;"></i><a href="mailto:fisioterapia@alzmx.org.mx" style="color: var(--aaa-purple);">fisioterapia@alzmx.org.mx</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Ponente 3 -->
+<div class="modal fade" id="ponenteModal3" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <img src="img/user.png" width="80" height="80" class="rounded-circle" style="object-fit:cover; border:2px solid var(--aaa-teal);">
+          <div>
+            <h5 class="mb-0 font-accent" style="color:var(--aaa-purple-dark);">L.N. Samary Coronel </h5>
+            <span class="text-muted small fw-semibold">Moderador</span>
+          </div>
+        </div>
+        <p class="small">Licenciada en Nutrición Humana por la Universidad Autónoma Metropolitana (UAM), enfocada en la atención de poblaciones vulnerables, adultos mayores y personas con demencia. En Alzheimer México, I.A.P. se ha desempeñado como Coordinadora del Área de Nutrición y Alimentación, y actualmente coordina el Área de Alianzas y Comunicación. Ha sido docente en el Instituto Mexicano de Envejecimiento Activo (IMENA), supervisora de prácticas clínicas, así como integrante del comité organizador de Alzheimer Aprende y Actúa desde 2021 y ponente en diversos foros de divulgación sobre el envejecimiento y las demencias. </p>
+        <p class="small"><i class="fa-solid fa-envelope" style="margin: 10px;"></i><a href="mailto:alianzas@alzmx.org.mx" style="color: var(--aaa-purple);">alianzas@alzmx.org.mx</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Ponente 4 -->
+<div class="modal fade" id="ponenteModal4" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <img src="img/user.png" width="80" height="80" class="rounded-circle" style="object-fit:cover; border:2px solid var(--aaa-teal);">
+          <div>
+            <h5 class="mb-0 font-accent" style="color:var(--aaa-purple-dark);">L.G. Yamileth Villarreal </h5>
+            <span class="text-muted small fw-semibold">Experto</span>
+          </div>
+        </div>
+        <p class="small">Gerontóloga clínica por la Universidad Autónoma del Estado de México y creadora de contenido en salud en redes sociales, con una comunidad de más de medio millón de personas. </p>
+        <p class="small"><i class="fa-solid fa-envelope" style="margin: 10px;"></i><a href="mailto:correo" style="color: var(--aaa-purple);">correo</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, once: true, offset: 60 });
+
+  // Elementos de la navegación
+  const nav = document.getElementById('aaaNav');
+  const mainLogo = document.getElementById('mainLogo');
+  
+  // Nav solid on scroll y cambio de Logo
+  const onScroll = () => {
+    if (window.scrollY > 40) {
+      nav.classList.add('is-solid');
+      mainLogo.src = 'img/logo-aaa-2026.png'; // Logo oscuro al hacer scroll
+    } else {
+      nav.classList.remove('is-solid');
+      mainLogo.src = 'img/logo-aaa-2026-blanco.png'; // Logo blanco en la parte superior
+    }
+  };
+  
+  document.addEventListener('scroll', onScroll);
+  onScroll();
+
+  // Close mobile menu after clicking a link (excluding dropdown toggles)
+  document.querySelectorAll('#navMenu a:not(.dropdown-toggle)').forEach(link => {
+    link.addEventListener('click', () => {
+      const menu = document.getElementById('navMenu');
+      if (menu.classList.contains('show')) {
+        bootstrap.Collapse.getOrCreateInstance(menu).hide();
+      }
+    });
+  });
+  // Inicializar tooltips de Bootstrap
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+</body>
+</html>

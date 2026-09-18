@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muro del estigma y miedo | Alzheimer Aprende y Actúa 2026</title>
+<meta name="description" content="Alzheimer Aprende y Actúa 2026: un programa para reconocer las señales, entender la enfermedad y actuar a tiempo frente a las demencias.">
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<!-- AOS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+<!-- Google Fonts: Poppins y Fraunces -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7SMK87RWYH"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-7SMK87RWYH');
+</script>
+
+
+<style>
+  .muro-band{ position:relative; height:auto!important;color: white!important;}
+  /* Ponentes List */
+  .speaker-item {
+    display: flex; align-items: center; gap: 1.2rem;
+    padding: 0.85rem 1.2rem; border-radius: var(--radius-md);
+    transition: all 0.3s ease; cursor: pointer;
+    background: rgba(255,255,255,0.1); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.3);
+  }
+  .speaker-item:hover {
+    background: rgba(255,255,255,0.15);
+    box-shadow: 0 4px 15px rgba(33,20,51,.08); transform: translateY(-3px);
+  }
+  .speaker-info h5 { color:white; }
+  .cargo {color: white!important;}
+  .muro-tag{
+    display:inline-flex; align-items:center; gap:.6rem;
+    color:#fff; font-family:'Poppins',sans-serif; font-weight:700; font-size:1.05rem; padding:.4rem 0;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  .muro-tag .num{
+    width:104px; height:34px; border-radius:20px;
+    background:rgba(255,255,255,.2); backdrop-filter:blur(4px);
+    border: 1px solid rgba(255,255,255,0.3);
+    display:flex; align-items:center; justify-content:center; font-size:.85rem;
+  }
+  .muro-4-sec { 
+    background: linear-gradient(rgba(199, 125, 124, 0.75), rgba(199, 125, 124, 0.95)), 
+                url('img/paraque.webp');
+    background-size: cover; background-position: center;
+  }
+
+</style>
+
+</head>
+<body>
+
+
+<!-- ============ NAV ============ -->
+<header class="aaa-nav" id="aaaNav">
+  <nav class="navbar navbar-expand-lg container">
+    <a class="navbar-brand aaa-logotype" href="index.html">
+      <img src="img/logo-aaa-2026-blanco.png" width="120px" alt="Logo" id="mainLogo">
+    </a>
+    
+    <button class="navbar-toggler d-flex d-lg-none align-items-center gap-1 glass-light border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú" style="border-radius: 999px;">
+      <span class="navbar-toggler-text d-lg-none ps-2">Menú</span>
+      <div class="d-flex flex-column justify-content-center pe-1">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </div>
+    </button>
+    
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link aaa-nav-link" href="directorio-aaa">Directorio Alzheimer</a></li>
+        <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="El día Lunes podrás acceder a esta sección">
+          <a class="nav-link aaa-nav-link" href="#" style="pointer-events: none; opacity: 0.5;">Material descargable</a>
+        </li>
+        <li class="nav-item"><a class="nav-link aaa-nav-link" href="mas-aaa">Más de AAA</a></li>
+        <li class="nav-item"><a class="nav-link aaa-nav-link" href="index.html#footer">Forma parte de AAA</a></li>
+        <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a class="btn-aaa-outline" href="programa-aaa2026.pdf">Programa</a></li>
+        <li class="nav-item me-lg-3 mb-2 mb-lg-0">
+          <a href="javascript:history.back()" class="btn" style="background-color: white; color: #723889; border: 2px solid #723889; border-radius: 999px; font-weight: 600; padding: 0.4rem 1.2rem; display: inline-flex; align-items: center; gap: 8px;">
+            <i class="fa-solid fa-arrow-left"></i> Regresar
+          </a>
+        </li>
+        
+        <li class="nav-item dropdown ms-lg-2 mt-3 mt-lg-0">
+          <a class="nav-link aaa-nav-link dropdown-toggle d-inline-flex align-items-center" href="#" id="hamburguesaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="d-lg-none me-2">Más opciones</span>
+            <i class="fa-solid fa-bars"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end mobile-scroll-dropdown glass-light" aria-labelledby="hamburguesaDropdown">
+            <li><a class="dropdown-item" href="index.html">Inicio</a></li>
+            <li><a class="dropdown-item" href="que-es-aaa">¿Qué es AAA?</a></li>
+            <li><a class="dropdown-item" href="index.html#muros">Los muros de las demencias</a></li>
+            <li><a class="dropdown-item" href="muro-normalizacion">Muro 1</a></li>
+            <li><a class="dropdown-item" href="muro-paraque">Muro 2</a></li>
+            <li><a class="dropdown-item" href="muro-babel">Muro 3</a></li>
+            <li><a class="dropdown-item" href="muro-estigma-miedo">Muro 4</a></li>
+            <li><a class="dropdown-item" href="mas-aaa">Más de AAA</a></li>
+            <li><a class="dropdown-item" href="material-descargable">Matrial descargable</a></li>
+            <li><a class="dropdown-item" href="directorio-aaa">Directorio AAA</a></li>
+            <li><a class="dropdown-item" href="index.html#footer">Forma parte de AAA</a></li>
+            <li><a class="dropdown-item" href="index.html#aliados">Aliados</a></li>
+            <li><a class="dropdown-item" href="index.html#footer">Contacto</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+<!-- ============ MURO 1: TERRACOTA ============ -->
+<section class="muro-band muro-4-sec" id="estigma" style="padding-top: 70px;">
+  <div class="muro-head-bar">
+    <div class="container">
+      <span class="muro-tag"><span class="num">13:00 hrs</span>  Jueves 24 de septiembre 2026</span>
+    </div>
+  </div>
+  <div class="container section-sm position-relative">
+    <div class="row align-items-center g-5 mb-5">
+      <!-- Lado Izquierdo: Video -->
+      <div class="col-lg-7" data-aos="fade-up">
+        <div class="video-card h-100" style="background-image: url(img/proximo.webp);background-size: cover;">
+          <span class="play-btn"><i class="fa-solid fa-play"></i></span>
+          <h3 style="position:absolute;top: 60%;text-align: center;font-weight: 700;color: white;">Podras verlo el<br><span class="font-accent">Jueves 24</span></h3>
+        </div>
+      </div>
+      <!-- Lado Derecho: Lista de Ponentes -->
+      <div class="col-lg-5" data-aos="fade-down">
+        <div class="d-flex flex-column gap-2">
+          <h2 style="font-size:clamp(1.8rem,3vw,2.6rem); margin-bottom: 20px;"><span class="font-accent">El estigma como condena:</span> aislamiento del paciente, agotamiento del cuidador</h2>
+          <!-- Ponente 1 -->
+          <div class="speaker-item" data-bs-toggle="modal" data-bs-target="#rosa">
+            <img src="img/ponentes/rosa.webp" alt="Ponente 1" class="speaker-img">
+            <div class="speaker-info">
+              <h5 class="mb-0 font-accent">Lic. Rosa María Farrés González Saravia</h5>
+              <span class="small cargo fw-semibold">Especialista en demencias</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-9 col-12">
+        <p class="mb-2">El estigma puede aparecer de formas muy cotidianas. Puede estar en una mirada, en un comentario, en la manera en que alguien deja de tomar en cuenta a una persona después de conocer su diagnóstico, o incluso en las propias ideas que una persona tiene sobre lo que significa vivir con demencia.</p>
+        <p class="mb-2">A veces, el miedo a ser juzgado hace que la persona deje de contar lo que le pasa, evite ciertas actividades o se aleje de otras personas. También puede llevar a las familias a esconder el diagnóstico o a dejar de pedir ayuda por temor a lo que los demás puedan pensar. Y esto importa porque mantenerse conectado con otras personas sigue siendo parte de la vida. Tener demencia no significa dejar de tener intereses, opiniones, vínculos o cosas que aportar. Tampoco significa que quien cuida deba hacerlo todo en silencio o sin apoyo.</p>
+        <p class="mb-2">Derribar este muro empieza por cambiar la conversación: hablar de la demencia sin reducir a la persona a su diagnóstico, escuchar lo que necesita y reconocer que pedir ayuda no es motivo de vergüenza.</p>
+        <p class="mb-2">El estigma no desaparece de un día para otro. Pero cada vez que hablamos de la demencia con respeto, incluimos a la persona en las decisiones y dejamos de asumir lo que puede o no puede hacer, estamos haciendo un poco más pequeño ese muro.</p>
+        
+        <p class="mb-2" style="font-size: 10px;">Fuentes:
+        <br>Estigma hacia la demencia: una revisión. (2015). Revista Chilena de Neuropsiquiatría. 
+        <br>Estigma hacia la demencia: una revisión. (2015). Revista Chilena de Neuropsiquiatría. 
+        <br>El síndrome del cuidador en los procesos con deterioro cognoscitivo (demencia). Atención Primaria. 
+        <br>Bosch Bayard, R. I., Llibre Rodríguez, J. de J., Zayas Llerena, T., & Hernández Ulloa, E. (2017). Superar el estigma hacia la demencia, un reto para la sociedad cubana. Revista Cubana de Enfermería. </p>
+      </div>
+      <div class="col-lg-3 col-12 text-center">
+        <a href="img/complementario/.jpg" download><img src="img/complementario/.jpg" width="100%" style="border-radius: 20px;"></a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ MURO 1: TERRACOTA ============ -->
+<section class="muro-band muro-4-sec" id="silencio">
+  <div class="muro-head-bar">
+    <div class="container">
+      <span class="muro-tag"><span class="num">16:00 hrs</span>  Jueves 24 de septiembre 2026</span>
+    </div>
+  </div>
+  <div class="container section-sm position-relative">
+    <div class="row align-items-center g-5 mb-5">
+      <!-- Lado Izquierdo: Video -->
+      <div class="col-lg-7" data-aos="fade-up">
+        <div class="video-card h-100" style="background-image: url(img/proximo.webp);background-size: cover;">
+          <span class="play-btn"><i class="fa-solid fa-play"></i></span>
+          <h3 style="position:absolute;top: 60%;text-align: center;font-weight: 700;color: white;">Podras verlo el<br><span class="font-accent">Jueves 24</span></h3>
+        </div>
+      </div>
+      <!-- Lado Derecho: Lista de Ponentes -->
+      <div class="col-lg-5" data-aos="fade-down">
+        <div class="d-flex flex-column gap-2">
+          <h2 style="font-size:clamp(1.8rem,3vw,2.6rem); margin-bottom: 20px;"><span class="font-accent">El costo del silencio:</span> por qué el estigma aísla y enferma dos veces</h2>
+          <!-- Ponente 1 -->
+          <div class="speaker-item" data-bs-toggle="modal" data-bs-target="#eli">
+            <img src="img/ponentes/eli.webp" alt="Ponente 1" class="speaker-img">
+            <div class="speaker-info">
+              <h5 class="mb-0 font-accent">Dr. Elí Elier González Sáenz</h5>
+              <span class="small cargo text-muted fw-semibold">Especialista en psiquiatría</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-9 col-12">
+        <p class="mb-2">Hablar de demencia no siempre es fácil. Para algunas personas, decirlo en voz alta significa enfrentarse al miedo de ser juzgadas, tratadas de manera diferente o dejar de ser tomadas en cuenta.</p>
+        <p class="mb-2">Por eso, algunas personas prefieren ocultar su diagnóstico. Los datos más recientes muestran que no se trata de algo poco común: en la encuesta internacional del World Alzheimer Report 2024, entre 19% y 36% de las personas encuestadas dijeron que mantendrían en secreto un diagnóstico de demencia, dependiendo del nivel de ingresos del país. El propio informe señala que el estigma puede convertirse en una barrera para buscar ayuda y favorecer el aislamiento social.</p>
+        <p class="mb-2">El problema es que el silencio no necesariamente protege. Puede hacer que una persona deje de pedir apoyo, se aleje de sus actividades habituales o evite hablar de los cambios que está viviendo. Y cuando una familia también decide callar por miedo al qué dirán, puede terminar enfrentando el cuidado con menos apoyo del que necesita.</p>
+        <p class="mb-2">El estigma también cambia la manera en que los demás se relacionan con una persona con demencia. Puede hacer que otros decidan por ella, dejen de preguntarle su opinión o asuman que ya no puede participar en determinadas actividades. Poco a poco, la persona puede quedar fuera de conversaciones y decisiones que siguen teniendo que ver con su propia vida.</p>
+        <p class="mb-2">Por eso, hablar de demencia no significa contarle todo a todo el mundo. Significa poder hablar de ella sin vergüenza y decidir, junto con la persona, quién necesita saberlo, qué apoyo necesita y cómo quiere seguir participando en su vida. Romper el silencio no elimina el estigma de un día para otro. Pero permite que la demencia no termine aislando a la persona de quienes la rodean.</p>
+        
+        <p class="mb-2" style="font-size: 10px;">Fuentes:
+        <br>Alzheimer’s Disease International. (2024). World Alzheimer Report 2024: Global changes in attitudes to dementia. Alzheimer’s Disease International.</p>
+      </div>
+      <div class="col-lg-3 col-12 text-center">
+        <a href="img/complementario/.jpg" download><img src="img/complementario/.jpg" width="100%" style="border-radius: 20px;"></a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="muro-band muro-4-sec" id="agotamiento">
+  <div class="muro-head-bar">
+    <div class="container">
+      <span class="muro-tag"><span class="num">10:00 hrs</span>  Viernes 25 de septiembre 2026</span>
+    </div>
+  </div>
+  <div class="container section-sm position-relative">
+    <div class="row align-items-center g-5 mb-5">
+      <!-- Lado Izquierdo: Video -->
+      <div class="col-lg-7" data-aos="fade-up">
+        <div class="video-card h-100" style="background-image: url(img/proximo.webp);background-size: cover;">
+          <span class="play-btn"><i class="fa-solid fa-play"></i></span>
+          <h3 style="position:absolute;top: 60%;text-align: center;font-weight: 700;color: white;">Podras verlo el<br><span class="font-accent">Viernes 25</span></h3>
+        </div>
+      </div>
+      <!-- Lado Derecho: Lista de Ponentes -->
+      <div class="col-lg-5" data-aos="fade-down">
+        <div class="d-flex flex-column gap-2">
+          <h2 style="font-size:clamp(1.8rem,3vw,2.6rem); margin-bottom: 20px;"><span class="font-accent">El agotamiento solitario del cuidador:</span> nombrar la soledad del cuidado</h2>
+          <!-- Ponente 1 -->
+          <div class="speaker-item" data-bs-toggle="modal" data-bs-target="#mariag">
+            <img src="img/ponentes/mariag.webp" alt="Ponente 1" class="speaker-img">
+            <div class="speaker-info">
+              <h5 class="mb-0 font-accent">Dra. María Guadalupe Jiménez García</h5>
+              <span class="small cargo text-muted fw-semibold">Especialista en geriatría</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-9 col-12">
+        <p class="mb-2">Cuidar a una persona con Alzheimer u otra demencia puede convertirse poco a poco en una tarea que ocupa casi todo el día: organizar medicamentos, acompañar a consultas, resolver cambios de conducta, ayudar con las actividades cotidianas y, al mismo tiempo, tratar de mantener la vida personal y familiar en marcha.</p>
+        <p class="mb-2">Ese desgaste no es “simplemente estar cansado”. La sobrecarga del cuidado puede afectar el estado de ánimo, el sueño, la salud física y las relaciones de quien cuida. En Estados Unidos, por ejemplo, 59% de los cuidadores de personas con demencia reportan niveles altos o muy altos de estrés emocional.
+        Y muchas veces las señales aparecen poco a poco con irritabilidad, dificultad para descansar, dejar de ver a amigos o hacer actividades que antes disfrutaban, sentirse constantemente preocupado o incluso experimentar enojo y frustración hacia la persona que se cuida.</p>
+        <p class="mb-2">El problema es que el agotamiento puede volverse invisible. Quien cuida puede pensar que descansar es egoísta, que pedir ayuda significa no poder con la responsabilidad o que “nadie más lo va a hacer”. Pero cuidar no debería significar desaparecer de la propia vida.</p>
+        <p class="mb-2">Compartir responsabilidades, pedir apoyo a otros familiares, buscar orientación profesional, acudir a un grupo de apoyo o recurrir a servicios de respiro y centros de día son formas de hacer que el cuidado sea sostenible. La evidencia muestra que distintas intervenciones pueden ayudar a disminuir la sobrecarga de quienes cuidan.³</p>
+        <p class="mb-2">Pedir ayuda no significa querer menos a la persona que se cuida. Significa reconocer que el cuidado también necesita una red.</p>
+        
+        <p class="mb-2" style="font-size: 10px;">Fuentes:
+        <br>Alzheimer’s Association. (2024). 2024 Alzheimer’s disease facts and figures. Alzheimer’s & Dementia, 20(5).
+        <br>2. Alzheimer’s Association. (s. f.). El estrés en los cuidadores.
+        <br>3. Rodríguez-Alcázar, F. J., Juárez-Vela, R., Sánchez-González, J. L., & Martín-Vallejo, J. (2024). Interventions effective in decreasing burden in caregivers of persons with dementia</p>
+      </div>
+      <div class="col-lg-3 col-12 text-center">
+        <a href="img/complementario/.jpg" download><img src="img/complementario/.jpg" width="100%" style="border-radius: 20px;"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="muro-band muro-4-sec" id="apoyo">
+  <div class="muro-head-bar">
+    <div class="container">
+      <span class="muro-tag"><span class="num">13:00 hrs</span>  Viernes 25 de septiembre 2026</span>
+    </div>
+  </div>
+  <div class="container section-sm position-relative">
+    <div class="row align-items-center g-5 mb-5">
+      <!-- Lado Izquierdo: Video -->
+      <div class="col-lg-7" data-aos="fade-up">
+        <div class="video-card h-100" style="background-image: url(img/proximo.webp);background-size: cover;">
+          <span class="play-btn"><i class="fa-solid fa-play"></i></span>
+          <h3 style="position:absolute;top: 60%;text-align: center;font-weight: 700;color: white;">Podras verlo el<br><span class="font-accent">Viernes 25</span></h3>
+        </div>
+      </div>
+      <!-- Lado Derecho: Lista de Ponentes -->
+      <div class="col-lg-5" data-aos="fade-down">
+        <div class="d-flex flex-column gap-2">
+          <h2 style="font-size:clamp(1.8rem,3vw,2.6rem); margin-bottom: 20px;"><span class="font-accent">Redes de apoyo y lenguaje digno:</span> construir comunidad en vez de vergüenza</h2>
+          <!-- Ponente 1 -->
+          <div class="speaker-item" data-bs-toggle="modal" data-bs-target="#victoria">
+            <img src="img/ponentes/victoria.webp" alt="Ponente 1" class="speaker-img">
+            <div class="speaker-info">
+              <h5 class="mb-0 font-accent">Esp. Victoria González García</h5>
+              <span class="small cargo text-muted fw-semibold">Especialista en gerontología</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-9 col-12">
+        <p class="mb-2">Cuidar a una persona con Alzheimer u otra demencia puede ser una experiencia muy solitaria. Las dudas, el cansancio y las responsabilidades se acumulan, y muchas veces parece que nadie más entiende lo que estamos viviendo.</p>
+        <p class="mb-2">Los grupos de apoyo, presenciales o virtuales, pueden ofrecer algo que va más allá de la información: la posibilidad de encontrarse con otras personas que atraviesan situaciones similares. Estos espacios pueden ayudar a disminuir el aislamiento y la sobrecarga de quienes cuidan.</p>
+        <p class="mb-2">Pero construir comunidad también tiene que ver con la forma en que hablamos de la demencia. Decir “una persona que vive con demencia” en lugar de reducirla a “el enfermo”, preguntarle qué quiere y evitar hablar de ella como si no estuviera presente son formas sencillas de reconocer su dignidad y mantenerla dentro de las conversaciones y decisiones que afectan su vida.</p>
+        <p class="mb-2">No siempre podemos hacer que el camino sea fácil, pero sí podemos evitar que alguien tenga que recorrerlo en soledad. Una red de apoyo también se construye cuando dejamos de hablar de la demencia con vergüenza y empezamos a hablar de ella en comunidad.</p>
+        
+        <p class="mb-2" style="font-size: 10px;">Fuentes:
+        <br>Animal Político. (2026). Guía para cuidadores: cómo encontrar redes de apoyo virtuales para enfrentar la demencia. 
+        <br>ReachLink. (2026). Opciones de tratamiento y recursos de apoyo para la demencia. 
+        <br>Alzheimers.gov. (2024). Consejos para los cuidadores y las familias de personas con demencia. </p>
+      </div>
+      <div class="col-lg-3 col-12 text-center">
+        <a href="img/complementario/.jpg" download><img src="img/complementario/.jpg" width="100%" style="border-radius: 20px;"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="muro-band muro-4-sec" id="cuidan">
+  <div class="muro-head-bar">
+    <div class="container">
+      <span class="muro-tag"><span class="num">16:00 hrs</span>  Viernes 25 de septiembre 2026</span>
+    </div>
+ </div>
+  <div class="container section-sm position-relative">
+    <div class="row align-items-center g-5 mb-5">
+      <!-- Lado Izquierdo: Video -->
+      <div class="col-lg-7" data-aos="fade-up">
+        <div class="video-card h-100" style="background-image: url(img/proximo.webp);background-size: cover;">
+          <span class="play-btn"><i class="fa-solid fa-play"></i></span>
+          <h3 style="position:absolute;top: 60%;text-align: center;font-weight: 700;color: white;">Podras verlo el<br><span class="font-accent">Viernes 25</span></h3>
+        </div>
+      </div>
+      <!-- Lado Derecho: Lista de Ponentes -->
+      <div class="col-lg-5" data-aos="fade-down">
+        <div class="d-flex flex-column gap-2">
+          <h2 style="font-size:clamp(1.8rem,3vw,2.6rem); margin-bottom: 20px;"><span class="font-accent">¿Quién cuida</span> de quienes cuidan cuando el sistema no alcanza?</h2>
+          <!-- Ponente 1 -->
+          <div class="speaker-item" data-bs-toggle="modal" data-bs-target="#eduardo">
+            <img src="img/ponentes/eduardo.webp" alt="Ponente 1" class="speaker-img">
+            <div class="speaker-info">
+              <h5 class="mb-0 font-accent">Dr. Eduardo Sosa Tinoco</h5>
+              <span class="small cargo text-muted fw-semibold">Especialista en geriatría</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-9 col-12">
+        <p class="mb-2">En México, gran parte del cuidado ocurre dentro de las familias y recae de manera desproporcionada sobre las mujeres. En 2022, 32 millones de personas participaban en tareas de cuidado; 24 millones eran mujeres y 7.9 millones, hombres.</p>
+
+        <p class="mb-2">Esto significa que cuando una persona necesita cuidados de largo plazo, la familia suele convertirse en la principal red de atención. Pero cuidar no debería depender únicamente de cuánto tiempo, dinero o energía tenga una familia disponible. La Comisión Económica para América Latina y el Caribe
+        (CEPAL) señala que México enfrenta una alta demanda de servicios de cuidado y una oferta todavía insuficiente, con importantes desigualdades de género.</p>
+
+        <p class="mb-2">Cuando el sistema no alcanza, la consecuencia no es solamente el cansancio de quien cuida. También puede significar dejar de trabajar, reducir ingresos, postergar proyectos personales o asumir en soledad responsabilidades que deberían ser compartidas entre familias, comunidades, instituciones y Estado.</p>
+
+        <p class="mb-2">Cuando reconocemos esta realidad, cambiamos la pregunta: “¿por qué la familia no puede con todo?” y comenzamos a cuestionarnos: “¿qué necesitamos construir para que nadie tenga que hacerlo todo por su cuenta?”</p>
+
+        <p class="mb-2">Cuidar también es una responsabilidad colectiva.</p>
+      </div>
+      <div class="col-lg-3 col-12 text-center">
+        <a href="img/complementario/.jpg" download><img src="img/complementario/.jpg" width="100%" style="border-radius: 20px;"></a>
+      </div>
+
+            
+      <p class="mb-2" style="font-size: 10px;">Fuentes:
+      <br>Comisión Económica para América Latina y el Caribe (CEPAL). (2024). Cuidar en México: del ámbito familiar a un sistema público. Naciones Unidas </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ============ FOOTER ============ -->
+<footer class="pt-5 pb-4">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-6" style="margin: auto 0px;">
+        <h2>¿Quieres formar parte de Alzheimer Aprende y Actúa?</h2>
+        <p>Escríbenos por cualquiera de estos canales y te compartimos cómo sumarte como aliado, ponente o sede.</p>
+      </div>
+      <div class="col-lg-4 d-flex flex-column align-items-lg-end gap-3" style="margin: auto 0px;">
+        <div class="d-flex gap-2 mb-5">
+          <a href="#" class="back-top" style="padding: 10px;"><i class="fa-solid fa-globe" style="margin: 10px;"></i>Alzheimer México</a>
+          <a href="#" class="back-top" style="padding: 10px;"><i class="fa-solid fa-heart-pulse" style="margin: 10px;"></i>Red Alzheimer</a>
+        </div>
+      </div>
+      <div class="col-lg-2 d-flex flex-column align-items-lg-end gap-3" style="margin: auto 0px;">
+        <div class="d-flex gap-2 mb-5">
+          <a href="https://wa.me/525525152218" class="back-top" style="padding: 10px;"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.facebook.com/alzheimermexico/" class="back-top" style="padding: 10px;"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/alzheimermex/" class="back-top" style="padding: 10px;"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@alzheimermx/" class="back-top" style="padding: 10px;"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr style="border-color:rgba(255,255,255,.1); margin:32px 0 16px;">
+    <p class="footer-fine mb-0">Sitio desarrollado por 3Clue · v1.0 · 2026 · Alzheimer México, A.C. Todos los derechos reservados. <a href="aviso-de-privacidad">Aviso de privacidad.</a> <a href="#">Términos de uso.</a></p>
+  </div>
+</footer>
+
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/525525152218" class="wa-float" aria-label="Escríbenos por WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+
+<!-- ============ MODALES DE PONENTES ============ -->
+<!-- Modal Ponente 1 -->
+<div class="modal fade" id="eli" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <img src="img/ponentes/eli.webp" width="200" height="200" class="rounded-circle" style="object-fit:cover; border:2px solid var(--aaa-teal);">
+          <div>
+            <h5 class="mb-0 font-accent" style="color:var(--aaa-purple-dark);">Dr. Elí Elier González Sáenz</h5>
+              <span class="small text-muted fw-semibold">Especialista en psiquiatría</span>
+          </div>
+        </div>
+        <p class="small">Especialista en psiquiatría con maestría en salud pubica y envejecimiento.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Ponente 2 -->
+<div class="modal fade" id="mariag" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <img src="img/ponentes/mariag.webp" width="200" height="200" class="rounded-circle" style="object-fit:cover; border:2px solid var(--aaa-teal);">
+          <div>
+            <h5 class="mb-0 font-accent" style="color:var(--aaa-purple-dark);">Dra. María Guadalupe Jiménez García</h5>
+              <span class="small text-muted fw-semibold">Especialista en geriatría</span>
+          </div>
+        </div>
+        <p class="small">Médica especialista en geriatría, enfocada en el envejecimiento saludable, deterioro cognitivo y cuidados integrales del adulto mayor.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Ponente 3 -->
+<div class="modal fade" id="victoria" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <img src="img/ponentes/victoria.webp" width="200" height="200" class="rounded-circle" style="object-fit:cover; border:2px solid var(--aaa-teal);">
+          <div>
+            <h5 class="mb-0 font-accent" style="color:var(--aaa-purple-dark);">Esp. Victoria González García</h5>
+              <span class="small text-muted fw-semibold">Especialista en gerontología</span>
+          </div>
+        </div>
+        <p class="small">Especialista en enfermería geriátrica, enfocada en la gestión del cuidado integral, prevención de síndromes geriátricos y apoyo al cuidador.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Ponente 4 -->
+<div class="modal fade" id="rosa" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <img src="img/ponentes/rosa.webp" width="200" height="200" class="rounded-circle" style="object-fit:cover; border:2px solid var(--aaa-teal);">
+          <div>
+            <h5 class="mb-0 font-accent" style="color:var(--aaa-purple-dark);">Lic. Rosa María Farrés González Saravia</h5>
+              <span class="small fw-semibold">Especialista en demencias</span>
+          </div>
+        </div>
+        <p class="small">Licenciada en Psicología, activista y expresidenta de la Asociación Mexicana de Alzheimer y Enfermedades Similares (AMAES).</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Ponente 4 -->
+<div class="modal fade" id="eduardo" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <img src="img/ponentes/eduardo.webp" width="200" height="200" class="rounded-circle" style="object-fit:cover; border:2px solid var(--aaa-teal);">
+          <div>
+            <h5 class="mb-0 font-accent" style="color:var(--aaa-purple-dark);">Dr. Eduardo Sosa Tinoco</h5>
+              <span class="small text-muted fw-semibold">Especialista en geriatría</span>
+          </div>
+        </div>
+        <p class="small">Médico geriatra con Maestría en Ciencias e investigador del Instituto Nacional de Geriatría (INGER).</p>
+        <p>Médico Especialista en Geriatría con Maestría en Ciencias por la Universidad Nacional Autónoma de México (UNAM) y adscrito al Instituto Nacional de Geriatría (INGER). Su trayectoria se centra en la investigación y atención clínica de los síndromes geriátricos, la multimorbilidad, el deterioro cognitivo y la fragilidad. Ha colaborado en múltiples publicaciones científicas, proyectos de salud pública y desarrollo de guías clínicas orientadas a mejorar la atención médica integral del adulto mayor en México.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, once: true, offset: 60 });
+
+  // Elementos de la navegación
+  const nav = document.getElementById('aaaNav');
+  const mainLogo = document.getElementById('mainLogo');
+  
+  // Nav solid on scroll y cambio de Logo
+  const onScroll = () => {
+    if (window.scrollY > 40) {
+      nav.classList.add('is-solid');
+      mainLogo.src = 'img/logo-aaa-2026.png'; // Logo oscuro al hacer scroll
+    } else {
+      nav.classList.remove('is-solid');
+      mainLogo.src = 'img/logo-aaa-2026-blanco.png'; // Logo blanco en la parte superior
+    }
+  };
+  
+  document.addEventListener('scroll', onScroll);
+  onScroll();
+
+  // Close mobile menu after clicking a link (excluding dropdown toggles)
+  document.querySelectorAll('#navMenu a:not(.dropdown-toggle)').forEach(link => {
+    link.addEventListener('click', () => {
+      const menu = document.getElementById('navMenu');
+      if (menu.classList.contains('show')) {
+        bootstrap.Collapse.getOrCreateInstance(menu).hide();
+      }
+    });
+  });
+  // Inicializar tooltips de Bootstrap
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+</body>
+</html>

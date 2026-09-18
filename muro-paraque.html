@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muro del "¿Para qué?" | Alzheimer Aprende y Actúa 2026</title>
+<meta name="description" content="Alzheimer Aprende y Actúa 2026: un programa para reconocer las señales, entender la enfermedad y actuar a tiempo frente a las demencias.">
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<!-- AOS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+<!-- Google Fonts: Poppins y Fraunces -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7SMK87RWYH"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-7SMK87RWYH');
+</script>
+
+
+<style>
+  .muro-band{ position:relative; height:auto!important;color: white!important;}
+  /* Ponentes List */
+  .speaker-item {
+    display: flex; align-items: center; gap: 1.2rem;
+    padding: 0.85rem 1.2rem; border-radius: var(--radius-md);
+    transition: all 0.3s ease; cursor: pointer;
+    background: rgba(255,255,255,0.1); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.3);
+  }
+  .speaker-item:hover {
+    background: rgba(255,255,255,0.15);
+    box-shadow: 0 4px 15px rgba(33,20,51,.08); transform: translateY(-3px);
+  }
+  .speaker-info h5 { color:white; }
+  .cargo {color: white!important;}
+  .muro-tag{
+    display:inline-flex; align-items:center; gap:.6rem;
+    color:#fff; font-family:'Poppins',sans-serif; font-weight:700; font-size:1.05rem; padding:.4rem 0;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  .muro-tag .num{
+    width:104px; height:34px; border-radius:20px;
+    background:rgba(255,255,255,.2); backdrop-filter:blur(4px);
+    border: 1px solid rgba(255,255,255,0.3);
+    display:flex; align-items:center; justify-content:center; font-size:.85rem;
+  }
+  .muro-2-sec { 
+    background: linear-gradient(rgba(226, 155, 39, 0.75), rgba(226, 155, 39, 0.95)), 
+                url('img/paraque.webp');
+    background-size: cover; background-position: center;
+  }
+
+</style>
+
+</head>
+<body>
+
+
+<!-- ============ NAV ============ -->
+<header class="aaa-nav" id="aaaNav">
+  <nav class="navbar navbar-expand-lg container">
+    <a class="navbar-brand aaa-logotype" href="index.html">
+      <img src="img/logo-aaa-2026-blanco.png" width="120px" alt="Logo" id="mainLogo">
+    </a>
+    
+    <button class="navbar-toggler d-flex d-lg-none align-items-center gap-1 glass-light border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú" style="border-radius: 999px;">
+      <span class="navbar-toggler-text d-lg-none ps-2">Menú</span>
+      <div class="d-flex flex-column justify-content-center pe-1">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </div>
+    </button>
+    
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link aaa-nav-link" href="directorio-aaa">Directorio Alzheimer</a></li>
+        <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="El día Lunes podrás acceder a esta sección">
+          <a class="nav-link aaa-nav-link" href="#" style="pointer-events: none; opacity: 0.5;">Material descargable</a>
+        </li>
+        <li class="nav-item"><a class="nav-link aaa-nav-link" href="mas-aaa">Más de AAA</a></li>
+        <li class="nav-item"><a class="nav-link aaa-nav-link" href="index.html#footer">Forma parte de AAA</a></li>
+        <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a class="btn-aaa-outline" href="programa-aaa2026.pdf">Programa</a></li>
+        <li class="nav-item me-lg-3 mb-2 mb-lg-0">
+          <a href="javascript:history.back()" class="btn" style="background-color: white; color: #723889; border: 2px solid #723889; border-radius: 999px; font-weight: 600; padding: 0.4rem 1.2rem; display: inline-flex; align-items: center; gap: 8px;">
+            <i class="fa-solid fa-arrow-left"></i> Regresar
+          </a>
+        </li>
+        
+        <li class="nav-item dropdown ms-lg-2 mt-3 mt-lg-0">
+          <a class="nav-link aaa-nav-link dropdown-toggle d-inline-flex align-items-center" href="#" id="hamburguesaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="d-lg-none me-2">Más opciones</span>
+            <i class="fa-solid fa-bars"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end mobile-scroll-dropdown glass-light" aria-labelledby="hamburguesaDropdown">
+            <li><a class="dropdown-item" href="index.html">Inicio</a></li>
+            <li><a class="dropdown-item" href="que-es-aaa">¿Qué es AAA?</a></li>
+            <li><a class="dropdown-item" href="index.html#muros">Los muros de las demencias</a></li>
+            <li><a class="dropdown-item" href="muro-normalizacion">Muro 1</a></li>
+            <li><a class="dropdown-item" href="muro-paraque">Muro 2</a></li>
+            <li><a class="dropdown-item" href="muro-babel">Muro 3</a></li>
+            <li><a class="dropdown-item" href="muro-estigma-miedo">Muro 4</a></li>
+            <li><a class="dropdown-item" href="mas-aaa">Más de AAA</a></li>
+            <li><a class="dropdown-item" href="material-descargable">Matrial descargable</a></li>
+            <li><a class="dropdown-item" href="directorio-aaa">Directorio AAA</a></li>
+            <li><a class="dropdown-item" href="index.html#footer">Forma parte de AAA</a></li>
+            <li><a class="dropdown-item" href="index.html#aliados">Aliados</a></li>
+            <li><a class="dropdown-item" href="index.html#footer">Contacto</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+<!-- ============ MURO 1: TERRACOTA ============ -->
+<section class="muro-band muro-2-sec" id="nihilismo" style="padding-top: 70px;">
+  <div class="muro-head-bar">
+    <div class="container">
+      <span class="muro-tag"><span class="num">16:00 hrs</span>  Lunes 21 de septiembre 2026</span>
+    </div>
+  </div>
+  <div class="container section-sm position-relative">
+    <div class="row align-items-center g-5 mb-5">
+      <!-- Lado Izquierdo: Video -->
+      <div class="col-lg-7" data-aos="fade-up">
+        <div class="video-card h-100" style="background-image: url(img/proximo.webp);background-size: cover;">
+          <span class="play-btn"><i class="fa-solid fa-play"></i></span>
+          <h3 style="position:absolute;top: 60%;text-align: center;font-weight: 700;color: white;">Podras verlo el<br><span class="font-accent">Lunes 21</span></h3>
+        </div>
+      </div>
+      <!-- Lado Derecho: Lista de Ponentes -->
+      <div class="col-lg-5" data-aos="fade-down">
+        <div class="d-flex flex-column gap-2">
+          <h2 style="font-size:clamp(1.8rem,3vw,2.6rem); margin-bottom: 20px;"> <span class="font-accent">Nihilismo</span> terapéutico: por qué "no hay nada que hacer" es una idea equivocada </h2>
+          <!-- Ponente 1 -->
+          <div class="speaker-item" data-bs-toggle="modal" data-bs-target="#juan">
+            <img src="img/ponentes/juan.webp" alt="Ponente 1" class="speaker-img">
+            <div class="speaker-info">
+              <h5 class="mb-0 font-accent">Dr. Juan Francisco Flores Vázquez</h5>
+              <span class="small cargo fw-semibold">Especialista en demencias</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-9 col-12">
+        <p class="mb-2">Una forma útil de entender esto es pensar en otras enfermedades crónicas sin cura: un paciente diabético nunca deja de serlo, pasa de estar descompensado a compensado, y necesita distintas intervenciones según el momento — pero nadie diría que 'no hay nada que hacer' por no existir una cura¹. Las demencias funcionan bajo la misma lógica: el énfasis no está en curar, está en acompañar bien durante todo el proceso.
+        <p class="mb-2">Por eso, la calidad de vida durante los años que dura la enfermedad es igual o más relevante que su duración misma². Actuar con tiempo —en vez de esperar a que la situación se salga de control— reduce la angustia de tomar decisiones en medio de una crisis, y da espacio para planear con calma en lugar de reaccionar con miedo³.
+        <p class="mb-5">El nihilismo terapéutico no solo le quita opciones a la persona diagnosticada — también le quita a la familia la oportunidad de prepararse. Sustituir la pregunta '¿para qué, si no tiene cura?' por '¿qué puedo hacer hoy?' es, en el fondo, lo que separa a la resignación del acompañamiento adecuado que mejora la calidad de vida.</p>
+        
+        <p class="mb-2" style="font-size: 10px;">Fuentes:
+        <br>1. Comparación clínica con el modelo de manejo de enfermedades crónicas no curables (ej. diabetes) — literatura sobre acompañamiento continuo frente a la ausencia de cura.
+        <br>2. Aurum Senior Living, "Esperanza de vida tras un diagnóstico de demencia" (2026) — calidad de vida como eje central del acompañamiento.
+        <br>3. Aurum Senior Living (2026) — beneficios de la planeación anticipada frente a la toma de decisiones en crisis.</p>
+      </div>
+      <div class="col-lg-3 col-12 text-center">
+        <a href="img/complementario/Nihilismo.jpg" download><img src="img/complementario/Nihilismo.jpg" width="100%" style="border-radius: 20px;"></a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ MURO 1: TERRACOTA ============ -->
+<section class="muro-band muro-2-sec" id="cambia">
+  <div class="muro-head-bar">
+    <div class="container">
+      <span class="muro-tag"><span class="num">10:00 hrs</span>  Martes 22 de septiembre 2026</span>
+    </div>
+  </div>
+  <div class="container section-sm position-relative">
+    <div class="row align-items-center g-5 mb-5">
+      <!-- Lado Izquierdo: Video -->
+      <div class="col-lg-7" data-aos="fade-up">
+        <div class="video-card h-100" style="background-image: url(img/proximo.webp);background-size: cover;">
+          <span class="play-btn"><i class="fa-solid fa-play"></i></span>
+          <h3 style="position:absolute;top: 60%;text-align: center;font-weight: 700;color: white;">Podras verlo el<br><span class="font-accent">Lunes 21</span></h3>
+        </div>
+      </div>
+      <!-- Lado Derecho: Lista de Ponentes -->
+      <div class="col-lg-5" data-aos="fade-down">
+        <div class="d-flex flex-column gap-2">
+          <h2 style="font-size:clamp(1.8rem,3vw,2.6rem); margin-bottom: 20px;">Qué cambia realmente con un <span class="font-accent">diagnóstico correcto</span></h2>
+          <!-- Ponente 1 -->
+          <div class="speaker-item" data-bs-toggle="modal" data-bs-target="#karla">
+            <img src="img/ponentes/karla.webp" alt="Ponente 1" class="speaker-img">
+            <div class="speaker-info">
+              <h5 class="mb-0 font-accent">Dra. Karla Patricia Gutiérrez Sánchez</h5>
+              <span class="small cargo text-muted fw-semibold">Especialista en demencias</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-9 col-12">
+        <p class="mb-2">Uno de los primeros signos de demencia son los cambios de personalidad, que pueden aparecer antes que cualquier pérdida de memoria evidente — esto ocurre porque las regiones cerebrales del hipocampo y la corteza frontal, responsables de la memoria y de la personalidad, están estrechamente relacionadas¹. Estos cambios incluyen irritabilidad, apatía, decaimiento y falta de iniciativa.</p>
+        <p class="mb-2">La apatía suele confundirse con depresión, pero la diferencia está en cómo se vive internamente: quienes tienen depresión se sienten tristes o decaídos, mientras que la apatía asociada a demencia generalmente no viene acompañada de ese malestar, solo de una pérdida de interés y motivación². De hecho, la apatía puede ser un indicador de que el deterioro cognitivo leve está progresando hacia una demencia establecida³.</p>
+        <p class="mb-5">Estos cambios de comportamiento a veces son la primera señal, y pueden aparecer de forma gradual o repentina⁴ — por eso, un cambio sostenido en la personalidad de alguien, sin una razón clara, merece la misma atención médica que un olvido preocupante.</p>
+        
+        <p class="mb-2" style="font-size: 10px;">Fuentes:
+        <br>1. Charter Research — cambios de personalidad como signo temprano de demencia (regiones cerebrales compartidas entre personalidad y memoria).
+        <br>2. Medscape — diferenciación clínica entre apatía asociada a demencia y depresión mayor.
+        <br>3. AARP, citando estudio publicado en el Journal of Alzheimer's Disease (2023) — apatía como indicador de progresión de DCL a Alzheimer.
+        <br>4. Alzheimer's Society (Reino Unido) — cambios de comportamiento como primera señal de demencia, de aparición gradual o repentina.</p>
+      </div>
+      <div class="col-lg-3 col-12 text-center">
+        <a href="img/complementario/quecambia.jpg" download><img src="img/complementario/quecambia.jpg" width="100%" style="border-radius: 20px;"></a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="muro-band muro-2-sec" id="importa">
+  <div class="muro-head-bar">
+    <div class="container">
+      <span class="muro-tag"><span class="num">13:00 hrs</span>  Martes 22 de septiembre 2026</span>
+    </div>
+  </div>
+  <div class="container section-sm position-relative">
+    <div class="row align-items-center g-5 mb-5">
+      <!-- Lado Izquierdo: Video -->
+      <div class="col-lg-7" data-aos="fade-up">
+        <div class="video-card h-100" style="background-image: url(img/proximo.webp);background-size: cover;">
+          <span class="play-btn"><i class="fa-solid fa-play"></i></span>
+          <h3 style="position:absolute;top: 60%;text-align: center;font-weight: 700;color: white;">Podras verlo el<br><span class="font-accent">Martes 22</span></h3>
+        </div>
+      </div>
+      <!-- Lado Derecho: Lista de Ponentes -->
+      <div class="col-lg-5" data-aos="fade-down">
+        <div class="d-flex flex-column gap-2">
+          <h2 style="font-size:clamp(1.8rem,3vw,2.6rem); margin-bottom: 20px;"><span class="font-accent">Por qué importa</span> saber qué tipo de demencia enfrenta la familia</h2>
+          <!-- Ponente 1 -->
+          <div class="speaker-item" data-bs-toggle="modal" data-bs-target="#maria">
+            <img src="img/ponentes/maria.webp" alt="Ponente 1" class="speaker-img">
+            <div class="speaker-info">
+              <h5 class="mb-0 font-accent">Dra. María Elena Álvarez Cervantes</h5>
+              <span class="small cargo text-muted fw-semibold">Especialista en demencias</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-9 col-12">
+        <p class="mb-2">Alzheimer es la causa más común de demencia (60-70% de los casos), pero existen otros tipos con comportamientos muy distintos: la demencia vascular, de inicio brusco o escalonado; la demencia por cuerpos de Lewy, que combina síntomas cognitivos con alucinaciones y síntomas motores; y la demencia frontotemporal, que aparece antes de los 65 años con cambios marcados de personalidad¹.(Estos son solo los tipos de demencia más comunes).</p>
+        <p class="mb-2">El tratamiento varía según el tipo: en el Alzheimer se usan inhibidores de la colinesterasa; en la vascular, lo esencial es controlar los factores de riesgo cardiovascular; en la frontotemporal el enfoque es sintomático². El riesgo de no diferenciar es real y serio: en la demencia por cuerpos de Lewy se evitan los antipsicóticos clásicos, porque pueden empeorar los síntomas motores y las alucinaciones³.</p>
+        <p class="mb-2">El tipo de demencia también cambia la planeación del cuidado: la vascular puede avanzar en escalones, mientras que la frontotemporal, al aparecer más joven, implica decisiones laborales y familiares distintas⁴. </p>
+        <p class="mb-5">Saber el tipo no es un dato secundario — determina qué tratamientos ayudan y cuáles pueden hacer daño.</p>
+        
+        <p class="mb-2" style="font-size: 10px;">Fuentes:
+        <br>1. Alzheimer's Association. (2024). Types of dementia. 
+        <br>2. National Institute on Aging. (2023). How is Alzheimer's disease treated? U.S. Department of Health and Human Services. 
+        <br>3. Merck Manual. (2023). Dementia with Lewy bodies and Parkinson's disease dementia. Merck Sharp & Dohme.
+        <br>4. National Institute on Aging. (2023). Alzheimer's disease and related dementias. U.S. Department of Health and Human Services. </p>
+      </div>
+      <div class="col-lg-3 col-12 text-center">
+        <a href="img/complementario/porqueimporrta.png" download><img src="img/complementario/porqueimporrta.png" width="100%" style="border-radius: 20px;"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="muro-band muro-2-sec" id="cambios">
+  <div class="muro-head-bar">
+    <div class="container">
+      <span class="muro-tag"><span class="num">16:00 hrs</span>  Martes 22 de septiembre 2026</span>
+    </div>
+  </div>
+  <div class="container section-sm position-relative">
+    <div class="row align-items-center g-5 mb-5">
+      <!-- Lado Izquierdo: Video -->
+      <div class="col-lg-7" data-aos="fade-up">
+        <div class="video-card h-100" style="background-image: url(img/proximo.webp);background-size: cover;">
+          <span class="play-btn"><i class="fa-solid fa-play"></i></span>
+          <h3 style="position:absolute;top: 60%;text-align: center;font-weight: 700;color: white;">Podras verlo el<br><span class="font-accent">Martes 22</span></h3>
+        </div>
+      </div>
+      <!-- Lado Derecho: Lista de Ponentes -->
+      <div class="col-lg-5" data-aos="fade-down">
+        <div class="d-flex flex-column gap-2">
+          <h2 style="font-size:clamp(1.8rem,3vw,2.6rem); margin-bottom: 20px;"><span class="font-accent">Anticiparse a los cambios conductuales</span>: construir estrategia, no reaccionar en crisis</h2>
+          <!-- Ponente 1 -->
+          <div class="speaker-item" data-bs-toggle="modal" data-bs-target="#agustin">
+            <img src="img/ponentes/agustin.webp" alt="Ponente 1" class="speaker-img">
+            <div class="speaker-info">
+              <h5 class="mb-0 font-accent">Dr. Agustín Torres Cid de León</h5>
+              <span class="small cargo text-muted fw-semibold">Especialista en psicogeriatría</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-9 col-12">
+        <p class="mb-2">Los síntomas psicológicos y conductuales de la demencia (SPCD) incluyen depresión, ansiedad, psicosis, agresividad y desinhibición, y pueden aparecer en cualquier momento de la enfermedad¹. Agravan la carga del cuidador, y ante la falta de formación para afrontarlos, en ocasiones llevan a una institucionalización más temprana de lo necesario².</p>
+        <p class="mb-2">Antes de recurrir a fármacos, se recomienda agotar las estrategias no farmacológicas, que además de estimular las capacidades cognitivas ayudan a reducir los propios síntomas conductuales³. Conocer los desencadenantes de cada conducta y la historia de vida de la persona da pistas valiosas para afrontar los episodios⁴.</p>
+        <p class="mb-5">Antes de asumir que un cambio de conducta es "parte de la enfermedad", conviene descartar dolor, infecciones o efectos secundarios de medicamentos⁴. El propio entorno del cuidado —el trato paternalista, la exasperación— puede agravar estos síntomas en lugar de calmarlos⁵. Anticiparse permite tener un plan, en vez de improvisar en medio de la crisis.</p>
+        
+        <p class="mb-2" style="font-size: 10px;">Fuentes:
+        <br>1. INFAC. (2025). Manejo de los síntomas psicológicos y conductuales de la demencia. INFAC, 33(1), 1-13. 
+        <br>2. Delmàs, R., & Formiga, F. (2007). Síntomas psicológicos y conductuales en las demencias y su manejo no farmacológico. Revista Multidisciplinar de Gerontología, 17(4), 192-197.
+        <br>3. Fisterra. (2023). Síntomas psicológicos y conductuales en el paciente con demencia: intervenciones no farmacológicas.
+        <br>4. Kales, H. C., Gitlin, L. N., & Lyketsos, C. G. (2015). Assessment and management of behavioral and psychological symptoms of dementia. BMJ, 350, h369.
+        <br>5. Olazarán-Rodríguez, J., Agüera-Ortiz, L., & Muñiz-Schwochert, R. (2012). Síntomas psicológicos y conductuales de la demencia: prevención, diagnóstico y tratamiento. Revista de Neurología, 55(10), 598-608.</p>
+      </div>
+      <div class="col-lg-3 col-12 text-center">
+        <a href="img/complementario/Anticiparse a los cambios conductuales.jpg" download><img src="img/complementario/Anticiparse a los cambios conductuales.jpg" width="100%" style="border-radius: 20px;"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ============ FOOTER ============ -->
+<footer class="pt-5 pb-4">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-6" style="margin: auto 0px;">
+        <h2>¿Quieres formar parte de Alzheimer Aprende y Actúa?</h2>
+        <p>Escríbenos por cualquiera de estos canales y te compartimos cómo sumarte como aliado, ponente o sede.</p>
+      </div>
+      <div class="col-lg-4 d-flex flex-column align-items-lg-end gap-3" style="margin: auto 0px;">
+        <div class="d-flex gap-2 mb-5">
+          <a href="#" class="back-top" style="padding: 10px;"><i class="fa-solid fa-globe" style="margin: 10px;"></i>Alzheimer México</a>
+          <a href="#" class="back-top" style="padding: 10px;"><i class="fa-solid fa-heart-pulse" style="margin: 10px;"></i>Red Alzheimer</a>
+        </div>
+      </div>
+      <div class="col-lg-2 d-flex flex-column align-items-lg-end gap-3" style="margin: auto 0px;">
+        <div class="d-flex gap-2 mb-5">
+          <a href="https://wa.me/525525152218" class="back-top" style="padding: 10px;"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.facebook.com/alzheimermexico/" class="back-top" style="padding: 10px;"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/alzheimermex/" class="back-top" style="padding: 10px;"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@alzheimermx/" class="back-top" style="padding: 10px;"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr style="border-color:rgba(255,255,255,.1); margin:32px 0 16px;">
+    <p class="footer-fine mb-0">Sitio desarrollado por 3Clue · v1.0 · 2026 · Alzheimer México, A.C. Todos los derechos reservados. <a href="aviso-de-privacidad">Aviso de privacidad.</a> <a href="#">Términos de uso.</a></p>
+  </div>
+</footer>
+
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/525525152218" class="wa-float" aria-label="Escríbenos por WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+
+<!-- ============ MODALES DE PONENTES ============ -->
+<!-- Modal Ponente 1 -->
+<div class="modal fade" id="juan" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <img src="img/ponentes/juan.webp" width="200" height="200" class="rounded-circle" style="object-fit:cover; border:2px solid var(--aaa-teal);">
+          <div>
+            <h5 class="mb-0 font-accent" style="color:var(--aaa-purple-dark);">Dr. Juan Francisco Flores Vázquez</h5>
+              <span class="small fw-semibold">Especialista en demencias</span>
+          </div>
+        </div>
+        <p class="small">Médico Psiquiatra con Alta Especialidad en Envejecimiento Cognitivo y Demencias, Doctor en Ciencias por la UNAM y la Universidad de Groningen, investigador en el Instituto Nacional de Geriatría.</p>
+        <p>Médico Cirujano egresado del Centro Universitario de Ciencias de la Salud de la Universidad de Guadalajara. Es Especialista en Psiquiatría por la Universidad Nacional Autónoma de México (UNAM), con residencia en el Hospital Psiquiátrico Fray Bernardino Álvarez. Cuenta con una Alta Especialidad en Medicina en Envejecimiento Cognitivo y Demencias por la UNAM y el Instituto Nacional de Neurología y Neurocirugía. Es Maestro en Ciencias Médicas y Doctor en Ciencias por la UNAM y la Universidad de Groningen en los Países Bajos. Actualmente, es Investigador en Ciencias Médicas "C" en la Dirección de Investigación Epidemiológica-Clínica del Instituto Nacional de Geriatría (INGER). Su investigación se centra en la salud mental y los trastornos neurocognitivos en adultos mayores.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Ponente 2 -->
+<div class="modal fade" id="karla" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <img src="img/ponentes/karla.webp" width="200" height="200" class="rounded-circle" style="object-fit:cover; border:2px solid var(--aaa-teal);">
+          <div>
+            <h5 class="mb-0 font-accent" style="color:var(--aaa-purple-dark);">Dra. Karla Patricia Gutiérrez Sánchez</h5>
+              <span class="small text-muted fw-semibold">Especialista en demencias</span>
+          </div>
+        </div>
+        <p class="small">Médica Psiquiatra especialista en Psicogeriatría y en Envejecimiento Cognitivo y Demencias por el Instituto Nacional de Neurología y Neurocirugía, profesora titular en la UNAM</p>
+        <p>Médico Cirujano General por la UNAM, psiquiatra y especialista en Psicogeriatría así como en Envejecimiento Cognitivo y Demencias por el Instituto Nacional de Neurología y Neurocirugía Manuel Velasco Suárez
+          <br><br>Es profesora titular de pregrado en la Facultad de Medicina de la UNAM y posee una Maestría en Dirección y Administración en Salud
+          <br>Participa como rater clínico en el proyecto DIAN, dentro del laboratorio de demencia del Instituto Nacional de Neurología y Neurocirugía</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Ponente 3 -->
+<div class="modal fade" id="maria" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <img src="img/ponentes/maria.webp" width="200" height="200" class="rounded-circle" style="object-fit:cover; border:2px solid var(--aaa-teal);">
+          <div>
+            <h5 class="mb-0 font-accent" style="color:var(--aaa-purple-dark);">Dra. María Elena Álvarez Cervantes</h5>
+              <span class="small text-muted fw-semibold">Especialista en demencias</span>
+          </div>
+        </div>
+        <p class="small">Médica Geriatra con Alta Especialidad en Envejecimiento Cognitivo y Demencias por el Instituto Nacional de Neurología y Neurocirugía</p>
+        <p>Médico General egresada de la Universidad Panamericana. Realizó su especialidad en Geriatría en el Hospital Central Norte de PEMEX y cuenta con una Alta Especialidad en Envejecimiento Cognitivo y Demencias por el Instituto Nacional de Neurología y Neurocirugía Manuel Velasco Suárez.
+          <br>Ofrece atención geriátrica integral con un enfoque que incluye el manejo de demencias, trastornos del sueño, depresión, síndrome de caídas y enfermedades crónicas. Además, ha participado en conferencias y cursos sobre envejecimiento cognitivo y demencias, contribuyendo al desarrollo de la geriatría en México.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Ponente 4 -->
+<div class="modal fade" id="agustin" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <img src="img/ponentes/agustin.webp" width="200" height="200" class="rounded-circle" style="object-fit:cover; border:2px solid var(--aaa-teal);">
+          <div>
+            <h5 class="mb-0 font-accent" style="color:var(--aaa-purple-dark);">Dr. Agustín Torres Cid de León</h5>
+              <span class="small text-muted fw-semibold">Especialista en psicogeriatría</span>
+          </div>
+        </div>
+        <p class="small">Psiquiatra y Psicogeriatra especialista en salud mental del adulto mayor y demencia, autor del libro Guía para sobrevivir al proceso de cuidar a una persona con demencia.</p>
+        <p>Psiquiatra y Psicogeriatra con formación en la UNAM y el Instituto Nacional de Psiquiatría Ramón de la Fuente Muñiz. Se especializa en salud mental del adulto mayor, demencia, depresión y ansiedad, con un enfoque psicoeducativo y preventivo. Es autor del libro Guía para sobrevivir al proceso de cuidar a una persona con demencia Alzheimer y otros tipos de demencia. Ha participado en programas como Cuídate para Cuidar y Bien y Saludable, y en medios como Canal Once y el podcast Antes de Morir.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, once: true, offset: 60 });
+
+  // Elementos de la navegación
+  const nav = document.getElementById('aaaNav');
+  const mainLogo = document.getElementById('mainLogo');
+  
+  // Nav solid on scroll y cambio de Logo
+  const onScroll = () => {
+    if (window.scrollY > 40) {
+      nav.classList.add('is-solid');
+      mainLogo.src = 'img/logo-aaa-2026.png'; // Logo oscuro al hacer scroll
+    } else {
+      nav.classList.remove('is-solid');
+      mainLogo.src = 'img/logo-aaa-2026-blanco.png'; // Logo blanco en la parte superior
+    }
+  };
+  
+  document.addEventListener('scroll', onScroll);
+  onScroll();
+
+  // Close mobile menu after clicking a link (excluding dropdown toggles)
+  document.querySelectorAll('#navMenu a:not(.dropdown-toggle)').forEach(link => {
+    link.addEventListener('click', () => {
+      const menu = document.getElementById('navMenu');
+      if (menu.classList.contains('show')) {
+        bootstrap.Collapse.getOrCreateInstance(menu).hide();
+      }
+    });
+  });
+  // Inicializar tooltips de Bootstrap
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+</body>
+</html>

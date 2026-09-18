@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Directorio AAA 2026 · Alzheimer Aprende y Actúa</title>
+<meta name="description" content="Directorio de instituciones FEDMA y expertos en demencias de Alzheimer Aprende y Actúa 2026.">
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<!-- AOS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+<!-- Google Fonts: Poppins y Fraunces -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7SMK87RWYH"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-7SMK87RWYH');
+</script>
+
+<!-- ============ CSS específico del Directorio (sólo para esta página) ============ -->
+<style>
+  /* --- Tabs FEDMA / Expertos --- */
+  .dir-tabs{
+    display:flex; justify-content:center; gap:10px;
+    margin-bottom:48px; flex-wrap:wrap;
+  }
+  .dir-tab-btn{
+    background:transparent; border:2px solid var(--aaa-ink);
+    color:var(--aaa-ink); font-weight:600; font-size:.95rem;
+    padding:.6rem 1.6rem; border-radius:999px; cursor:pointer;
+    transition:all .25s ease;
+  }
+  .dir-tab-btn.active,
+  .dir-tab-btn:hover{ background:var(--aaa-purple); border-color:var(--aaa-purple); color:#fff; }
+  .dir-panel{ display:none; }
+  .dir-panel.active{ display:block; animation:dirFadeIn .35s ease; }
+  @keyframes dirFadeIn{ from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:translateY(0);} }
+
+  /* --- Buscador --- */
+  .dir-search{
+    max-width:480px; margin:0 auto 40px; position:relative;
+  }
+  .dir-search input{
+    width:100%; border:2px solid rgba(64,63,65,.15); border-radius:999px;
+    padding:.7rem 1.4rem .7rem 2.8rem; font-family:'Poppins',sans-serif; font-size:.95rem;
+    background:var(--aaa-paper); outline:none; transition:border-color .2s ease;
+  }
+  .dir-search input:focus{ border-color:var(--aaa-teal); }
+  .dir-search i{ position:absolute; left:1.1rem; top:50%; transform:translateY(-50%); color:var(--aaa-teal); }
+
+  /* --- Tarjetas de contacto --- */
+  .dir-cards{ display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:18px; }
+  .dir-card{
+    background:var(--aaa-paper); border-radius:var(--radius-sm);
+    padding:20px 22px; box-shadow:0 4px 15px rgba(0,0,0,0.04);
+    border:1px solid rgba(0,0,0,0.04);
+    text-align: center; /* Alineación centrada */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .dir-card-empty{
+    display:flex; align-items:center; justify-content:center;
+    border:2px dashed rgba(64,63,65,.15); background:transparent; box-shadow:none;
+  }
+  .dir-card-title{ font-size:1rem; font-weight:700; color:var(--aaa-purple-dark); margin-bottom:8px; line-height:1.3; }
+  .dir-card-tag{
+    display:inline-block; font-size:.75rem; font-weight:600; color:var(--aaa-teal-dark);
+    background:rgba(33,144,137,.1); padding:3px 12px; border-radius:999px; margin-bottom:10px;
+  }
+  .dir-address, .dir-modality{
+    font-size:.82rem; color:var(--aaa-ink); opacity:.8; text-align:center;
+    margin-bottom:6px; display:flex; align-items:flex-start; justify-content: center; gap:8px;
+  }
+  .dir-address i, .dir-modality i{ color:var(--aaa-teal); margin-top:3px; flex-shrink:0; width:14px; }
+  .dir-links{ display:flex; flex-wrap:wrap; justify-content: center; gap:8px; margin-top:12px; }
+  .dir-link, .dir-link-static{
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:.78rem; font-weight:600; color:var(--aaa-purple);
+    background:rgba(109,52,136,.04); padding:5px 12px; border-radius:999px;
+    border: 1px solid rgba(109,52,136,.3); /* Borde fino */
+    text-decoration:none; transition:all .2s ease;
+  }
+  a.dir-link:hover{ background:var(--aaa-purple); border-color:var(--aaa-purple); color:#fff; }
+  .dir-link-static{ color:var(--aaa-ink); opacity:.7; cursor:default; }
+  .dir-link i{ font-size:.85em; }
+
+  .dir-cards-experts{ grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); }
+
+  .dir-no-results{ text-align:center; padding:40px 0; opacity:.6; display:none; }
+
+  @media (max-width: 575px){
+    .dir-cards{ grid-template-columns:1fr; }
+  }
+</style>
+
+</head>
+<body>
+
+
+<!-- ============ NAV ============ -->
+<header class="aaa-nav" id="aaaNav">
+  <nav class="navbar navbar-expand-lg container">
+    <a class="navbar-brand aaa-logotype" href="index.html">
+      <img src="img/logo-aaa-2026-blanco.png" width="120px" alt="Logo" id="mainLogo">
+    </a>
+
+    <button class="navbar-toggler d-flex d-lg-none align-items-center gap-1 glass-light border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú" style="border-radius: 999px;">
+      <span class="navbar-toggler-text d-lg-none ps-2">Menú</span>
+      <div class="d-flex flex-column justify-content-center pe-1">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </div>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link aaa-nav-link" href="directorio-aaa">Directorio Alzheimer</a></li>
+        <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="El día Lunes podrás acceder a esta sección">
+          <a class="nav-link aaa-nav-link" href="#" style="pointer-events: none; opacity: 0.5;">Material descargable</a>
+        </li>
+        <li class="nav-item"><a class="nav-link aaa-nav-link" href="mas-aaa">Más de AAA</a></li>
+        <li class="nav-item"><a class="nav-link aaa-nav-link" href="index.html#footer">Forma parte de AAA</a></li>
+        <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a class="btn-aaa-outline" href="programa-aaa2026.pdf">Programa</a></li>
+        <li class="nav-item me-lg-3 mb-2 mb-lg-0">
+          <a href="javascript:history.back()" class="btn" style="background-color: white; color: #723889; border: 2px solid #723889; border-radius: 999px; font-weight: 600; padding: 0.4rem 1.2rem; display: inline-flex; align-items: center; gap: 8px;">
+            <i class="fa-solid fa-arrow-left"></i> Regresar
+          </a>
+        </li>
+
+        <li class="nav-item dropdown ms-lg-2 mt-3 mt-lg-0">
+          <a class="nav-link aaa-nav-link dropdown-toggle d-inline-flex align-items-center" href="#" id="hamburguesaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="d-lg-none me-2">Más opciones</span>
+            <i class="fa-solid fa-bars"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end mobile-scroll-dropdown glass-light" aria-labelledby="hamburguesaDropdown">
+            <li><a class="dropdown-item" href="index.html">Inicio</a></li>
+            <li><a class="dropdown-item" href="index.html#que-es">¿Qué es AAA?</a></li>
+            <li><a class="dropdown-item" href="index.html#muros">Los muros de las demencias</a></li>
+            <li><a class="dropdown-item" href="muro-normalizacion">Muro 1</a></li>
+            <li><a class="dropdown-item" href="muro-paraque">Muro 2</a></li>
+            <li><a class="dropdown-item" href="muro-babel">Muro 3</a></li>
+            <li><a class="dropdown-item" href="muro-estigma-miedo">Muro 4</a></li>
+            <li><a class="dropdown-item" href="mas-de-aaa">Más de AAA</a></li>
+            <li><a class="dropdown-item" href="material-descargable">Matrial descargable</a></li>
+            <li><a class="dropdown-item" href="directorio-aaa">Directorio AAA</a></li>
+            <li><a class="dropdown-item" href="index.html#footer">Forma parte de AAA</a></li>
+            <li><a class="dropdown-item" href="index.html#aliados">Aliados</a></li>
+            <li><a class="dropdown-item" href="index.html#footer">Contacto</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio" style="max-height: 10vh!important;min-height: 10vh;">
+  <div class="hero-grain"></div>
+  <div class="hero-grain"></div>
+  <div class="container hero-content"></div>
+  <a href="#directorio" class="scroll-cue" aria-label="Bajar a la siguiente sección">
+    <i class="fa-solid fa-chevron-down fa-lg"></i>
+  </a>
+</section>
+
+<!-- ============ DIRECTORIO ============ -->
+<section class="section" id="directorio">
+  <div class="container">
+
+    <div class="text-center mb-4" data-aos="fade-up">
+      <h2 class="mb-3">Directorio <span class="font-accent">AAA 2026</span></h2>
+      <p class="mx-auto-p" style="max-width:640px;">Instituciones de la Federación Mexicana de Alzheimer (FEDMA) y el directorio de expertos que colaboran con Alzheimer Aprende y Actúa.</p>
+    </div>
+
+    <div class="dir-tabs" data-aos="fade-up">
+      <button class="dir-tab-btn active" data-target="panel-fedma">FEDMA</button>
+      <button class="dir-tab-btn" data-target="panel-expertos">Expertos</button>
+    </div>
+
+    <div class="dir-search" data-aos="fade-up">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="dirSearchInput" placeholder="Buscar por nombre, estado o especialidad...">
+    </div>
+
+    <!-- PANEL FEDMA -->
+    <div class="dir-panel active" id="panel-fedma" data-aos="fade-up">
+<div class="dir-cards">
+  <div class="dir-card">
+    <h3 class="dir-card-title" style="text-transform: uppercase;">Asociación Mexicana de Alzheimer y Enfermedades Similares, A.C. (AMAES)</h3>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Alzheimer México, l.A.P.Haz clic para abrir el panel lateral y obtener más información en Calle Moneda 90, Tlalpan Centro, CDMX</span></div>
+    <div class="dir-links">
+      <a href="tel:525552804202" class="dir-link"><i class="fa-solid fa-phone"></i> 525552804202</a>
+      <a href="https://wa.me/5552804202" target="_blank" class="dir-link"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      <a href="mailto:operaciones@alzmx.org" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://www.alzheimermexico.org.mx/nosotros.html" target="_blank" class="dir-link"><i class="fa-solid fa-globe"></i> Web</a>
+      <a href="https://www.facebook.com/search/top?q=Alzheimer México IAP | Facebook" target="_blank" class="dir-link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+      <a href="https://www.instagram.com/" target="_blank" class="dir-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">ALZHEIMER DEL SURESTE A.C.
+(999) 438-9842</h3>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Calle 39 #606 entre Avenida Itzáes y calle 84-B.  Colonia Centro., Mérida, Mexico, 97000</span></div>
+    <div class="dir-links">
+      <a href="tel:9994389842" class="dir-link"><i class="fa-solid fa-phone"></i> 999 438 9842</a>
+      <a href="https://wa.me/999438984" target="_blank" class="dir-link"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      <a href="mailto:alzsureste@gmail.com" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://www.facebook.com/search/top?q=Alzheimer Del Sureste | Facebook" target="_blank" class="dir-link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">FUNDACIÓN ALZHEIMER COAHUILA A.C.
+(844) 3442889</h3>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Blvd. José Sarmiento col. Kiosco Ampliación Saltillo Coah. 252040, Saltillo, Mexico, 252040</span></div>
+    <div class="dir-links">
+      <a href="tel:8442283597" class="dir-link"><i class="fa-solid fa-phone"></i> 844 228 3597</a>
+      <a href="https://wa.me/8442283597" target="_blank" class="dir-link"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      <a href="mailto:fundacionalzheimercoahuila@gmail.com" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://Centro" target="_blank" class="dir-link"><i class="fa-solid fa-globe"></i> Web</a>
+      <a href="https://www.facebook.com/search/top?q=(2) Facebook" target="_blank" class="dir-link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">ASOCIACIÓN ALZHEIMER DE TAMPICO, CD, MADERO A.C.
+(833) 227-9937 y 256-8073</h3>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Av Manrique 540, Colinas de San Gerardo, 89367 Tampico, Tamps.</span></div>
+    <div class="dir-links">
+      <a href="tel:8332279937" class="dir-link"><i class="fa-solid fa-phone"></i> 8332279937</a>
+      <a href="https://wa.me/8332279937" target="_blank" class="dir-link"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      <a href="mailto:casa-alzheimer@hotmail.com" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://www.asociacionalzheimertampico.com/" target="_blank" class="dir-link"><i class="fa-solid fa-globe"></i> Web</a>
+      <a href="https://www.facebook.com/search/top?q=(1) Facebook" target="_blank" class="dir-link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+      <a href="https://www.instagram.com/asociacionalzheimer.tampico/" target="_blank" class="dir-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">FUNDACIÓN ALZHEIMER CASA BELÉN Tijuana B.C. (664) 974-9663 y (664) 974-9668</h3>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Calle Alba Roja #13006 
+Col. Hipódromo 2 
+CP 22195 Tijuana, B.C.</span></div>
+    <div class="dir-links">
+      <a href="tel:526649749663686649749663" class="dir-link"><i class="fa-solid fa-phone"></i> 52(664) 974-966...</a>
+      <a href="https://wa.me/6649749663" target="_blank" class="dir-link"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      <a href="mailto:jsandoval@alzheimer-bc.org" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://Fundaciónalzheimer" target="_blank" class="dir-link"><i class="fa-solid fa-globe"></i> Web</a>
+      <a href="https://www.facebook.com/fundacionalzheimerbc/" target="_blank" class="dir-link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+      <a href="https://www.instagram.com/" target="_blank" class="dir-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">ASOCIACIÓN SONORENSE DE ALZHEIMER Y ENFERMEDADES SIMILARES
+(662) 213-4563</h3>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>a un costado de la Capilla del Carmen, Jesús Garcia 169 y Calzada de Guadalupe, Centro, 83000 Hermosillo, Son.</span></div>
+    <div class="dir-links">
+      <a href="tel:6621356373526621356373" class="dir-link"><i class="fa-solid fa-phone"></i> 66 2 135 6373
+5...</a>
+      <a href="https://wa.me/6621356373" target="_blank" class="dir-link"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      <a href="mailto:alzheimersonora@hotmail.com" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://www.facebook.com/profile.php?id=100064712138222" target="_blank" class="dir-link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+      <a href="https://www.instagram.com/alz_son/" target="_blank" class="dir-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">ESTANCIA DORITA OJEDA I.A.P.
+(644) 4145715</h3>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Jdn. Obregón 1107, Cincuentenario, 85040 Cdad. Obregón, Son.</span></div>
+    <div class="dir-links">
+      <a href="tel:64425291386442529138" class="dir-link"><i class="fa-solid fa-phone"></i> 64 4-252 9138
+6...</a>
+      <a href="https://wa.me/6442529138" target="_blank" class="dir-link"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      <a href="mailto:centrodeterapiayrehabilitacion@hotmail.com" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://www.facebook.com/EstanciaAlzObregon" target="_blank" class="dir-link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">CENTRO DE ALZHEIMER DE LA LAGUNA A.C.
+(871) 236-8897</h3>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Eulogio Ortiz 32, Amp los Ángeles, 27148 Torreón, Coah.</span></div>
+    <div class="dir-links">
+      <a href="tel:528717132718" class="dir-link"><i class="fa-solid fa-phone"></i> 528717132718</a>
+      <a href="https://wa.me/528717132718" target="_blank" class="dir-link"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      <a href="mailto:centroalzheimerlaguna@hotmail.com" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://www.facebook.com/centro.a.laguna" target="_blank" class="dir-link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">SOCIACIÓN ALZHEIMER DE MONTERREY A.C.
+(811) 269-5707</h3>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Asociación de Alzheimer de Monterrey A.C., Rio Sena #114-A, San Pedro Garza García, Nuevo León 66220, México</span></div>
+    <div class="dir-links">
+      <a href="tel:528118803433" class="dir-link"><i class="fa-solid fa-phone"></i> (52) 811 880 34...</a>
+      <a href="https://wa.me/528118803433" target="_blank" class="dir-link"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      <a href="mailto:contacto@alz.mx" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://alz.mx/" target="_blank" class="dir-link"><i class="fa-solid fa-globe"></i> Web</a>
+      <a href="https://www.facebook.com/alz.mty/" target="_blank" class="dir-link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+      <a href="https://www.instagram.com/alz.mty/?hl=es" target="_blank" class="dir-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">ASOCIACIÓN REYNOSENSE DE ALZHEIMER A.C.
+(899) 923-5399 y (899) 956-3607</h3>
+    <div class="dir-links">
+      <a href="tel:89992353998999563607" class="dir-link"><i class="fa-solid fa-phone"></i> (899) 923 53 99...</a>
+      <a href="https://wa.me/89992353998999563607" target="_blank" class="dir-link"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      <a href="mailto:alzheimerreynosa@gmail.com" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://www.fundacionalzheimerreynosa.com" target="_blank" class="dir-link"><i class="fa-solid fa-globe"></i> Web</a>
+      <a href="https://www.facebook.com/profile.php?id=100064876020516" target="_blank" class="dir-link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">ASOCIACIÓN ALZHEIMER DE MATAMOROS
+868-8139002</h3>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Av. 12 de Marzo y Leyes de Reforma, Col. Las Águilas, C.P. 87346, Heroica Matamoros, Tamaulipas.</span></div>
+    <div class="dir-links">
+      <a href="tel:83322799372568073" class="dir-link"><i class="fa-solid fa-phone"></i> (833) 227 99 37...</a>
+      <a href="mailto:casa-alzheimer@hotmail.com" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://www.facebook.com/search/top?q=(1) Facebook" target="_blank" class="dir-link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">ASOCIACIÓN POTOSINA DE ALZHEMIER Y ENFERMEDADES SIMILARES
+(444) 841-6380</h3>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Calle Maples 186, Col. Tecnológico, C.P. 78220, San Luis Potosí, S.L.P.</span></div>
+    <div class="dir-links">
+      <a href="tel:44481530264448416380" class="dir-link"><i class="fa-solid fa-phone"></i> (444) 815-3026 ...</a>
+      <a href="https://wa.me/524448416380" target="_blank" class="dir-link"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      <a href="mailto:apaes1@hotmail.com" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://www.facebook.com/profile.php?id=100024731432817" target="_blank" class="dir-link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">FUNDACIÓN FAMILIARES DE ALZHEIMER AGUASCALIENTES A.C.
+(449) 112-0228</h3>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>José María Escrivá de Balaguer 121, Villas de Bonaterra, Aguascalientes, Mexico, 20290</span></div>
+    <div class="dir-links">
+      <a href="tel:44997055144491120228" class="dir-link"><i class="fa-solid fa-phone"></i> (449) 970 55 14...</a>
+      <a href="https://wa.me/4492058335" target="_blank" class="dir-link"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      <a href="mailto:fundacionalzheimer.ags@hotmail.com" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://Fundación" target="_blank" class="dir-link"><i class="fa-solid fa-globe"></i> Web</a>
+      <a href="https://www.facebook.com/search/top?q=(1) Facebook" target="_blank" class="dir-link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">FUNDACIÓN ALZHEIMER LEÓN "Alguien con quien contar" A.C. INSTITUTO DE LA MEMORIA
+(477) 514-0999</h3>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Ancorada 127, Residencial San Angel, 37287 León de los Aldama, Gto.</span></div>
+    <div class="dir-links">
+      <a href="tel:47751409995143983" class="dir-link"><i class="fa-solid fa-phone"></i> (477) 514 09 99...</a>
+      <a href="https://wa.me/524771870671" target="_blank" class="dir-link"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      <a href="mailto:contacto@institutodelamemoria.org.mx" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://institutodelamemoria.org.mx/" target="_blank" class="dir-link"><i class="fa-solid fa-globe"></i> Web</a>
+      <a href="https://www.facebook.com/search/top?q=Facebook" target="_blank" class="dir-link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">PLENITUD Y DEMENCIAS A.C.
+(333) 197-1616</h3>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Av. La Calma 3110, Col. La Calma, C.P. 45070, Zapopan / Guadalajara, Jalisco.</span></div>
+    <div class="dir-links">
+      <a href="tel:33319716163331211221" class="dir-link"><i class="fa-solid fa-phone"></i> (333) 197-1616 ...</a>
+      <a href="https://wa.me/3331971616" target="_blank" class="dir-link"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      <a href="mailto:plenitudydemencias@gmail.com." class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://plenitudydemencias.org/" target="_blank" class="dir-link"><i class="fa-solid fa-globe"></i> Web</a>
+      <a href="https://www.facebook.com/PlenitudyDemenciasAC" target="_blank" class="dir-link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+    </div>
+  </div>
+</div>
+      <p class="dir-no-results" id="dirNoResultsFedma">No encontramos resultados con ese término.</p>
+    </div>
+
+    <!-- PANEL EXPERTOS -->
+    <div class="dir-panel" id="panel-expertos" data-aos="fade-up">
+<div class="dir-cards dir-cards-experts">
+  <div class="dir-card">
+    <h3 class="dir-card-title">Erika Mariana Longoria Ibarrola</h3>
+    <span class="dir-card-tag">Psiquiatría, envejecimiento cognitivo y demencias</span>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Ángeles Pedregal, HMG, San Ángelinn</span></div>
+    <div class="dir-links">
+      <a href="https://wa.me/5534348398" class="dir-link" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      <a href="mailto:mibarriola87@hotmail.com" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://www.linkedin.com/search/results/all/?keywords=Erika Mariana Longoria" target="_blank" class="dir-link"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">Zazil A. Ramírez Espinosa</h3>
+    <span class="dir-card-tag">Geriatría</span>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Cuauhtémoc 1040, Col. Narvarte Poniente</span></div>
+    <div class="dir-links">
+      <a href="tel:5612781273" class="dir-link" target="_blank"><i class="fa-solid fa-phone"></i> 5612781273</a>
+      <a href="mailto:drazazilramirez.geriatra@gmail.com" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://www.instagram.com/drazazilramireze.geriatra" target="_blank" class="dir-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">Paloma Roa Rojas</h3>
+    <span class="dir-card-tag">Neuropsicología</span>
+    <div class="dir-links">
+      <a href="mailto:projas@inger.gob.mx" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">Manisol Valdés Escárraga</h3>
+    <span class="dir-card-tag">Geriatría</span>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Puente de Piedra 150, Toriello Guerra, Tlalpan, 14050 Ciudad de México, CDMX</span></div>
+    <div class="dir-links">
+      <a href="tel:55542472003002" class="dir-link" target="_blank"><i class="fa-solid fa-phone"></i> 5554247200 (ext</a>
+      <a href="mailto:mvaldese@medicasur.org.mx" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">Adela Hernández Galván</h3>
+    <span class="dir-card-tag">Neuropsicología</span>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Pico de Orizaba No. 1, Col. Volcanes, Cuernavaca, Mor.</span></div>
+    <div class="dir-links">
+      <a href="tel:5591612573" class="dir-link" target="_blank"><i class="fa-solid fa-phone"></i> 5591612573</a>
+      <a href="mailto:adela.hernandez.g@uaem.mx" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://www.facebook.com/search/top?q=Asociación Morelense de Alzheimer, A.C." target="_blank" class="dir-link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">Agustín Torres Cid de León</h3>
+    <span class="dir-card-tag">Psiquiatra, Alta Especialidad en Psicogeriatría</span>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Ejército Nacional 617, Piso 3-302, Hospital Español</span></div>
+    <div class="dir-links">
+      <a href="tel:55895102425589510727" class="dir-link" target="_blank"><i class="fa-solid fa-phone"></i> 5589510242 / 55</a>
+      <a href="mailto:ATCDEL@gmail.com" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://www.linkedin.com/search/results/all/?keywords=Dr. Agustín Torres" target="_blank" class="dir-link"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      <a href="https://www.instagram.com/dr.agustin_tc" target="_blank" class="dir-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      <a href="https://www.facebook.com/search/top?q=Dr. Agustín Torres" target="_blank" class="dir-link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">Victoria González García</h3>
+    <span class="dir-card-tag">Mtra. en Desarrollo Social</span>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Periférico Sur No. 2767, Col. San Jerónimo Lídice</span></div>
+    <div class="dir-links">
+      <a href="tel:56551921" class="dir-link" target="_blank"><i class="fa-solid fa-phone"></i> 56551921</a>
+      <a href="mailto:vgonzalez@inger.gob.mx" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://www.instagram.com/Masalladecuidar" target="_blank" class="dir-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      <a href="https://www.facebook.com/search/top?q=Masalladecuidar" target="_blank" class="dir-link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">Emilia Chino Hernández</h3>
+    <span class="dir-card-tag">Geriatría/Médico</span>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Adolfo López Mateos 23, Jesús del Monte, Huixquilucan</span></div>
+    <div class="dir-links">
+      <a href="tel:5615088630" class="dir-link" target="_blank"><i class="fa-solid fa-phone"></i> 5615088630</a>
+      <a href="mailto:emilia@centrodedia.mx" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://www.linkedin.com/search/results/all/?keywords=Emilia Chino" target="_blank" class="dir-link"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      <a href="https://www.instagram.com/emiliachino
+Centrodedíamx
+terceracomunidadpodcast" target="_blank" class="dir-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      <a href="https://www.facebook.com/search/top?q=emiliachino" target="_blank" class="dir-link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">María Guadalupe Jiménez García</h3>
+    <span class="dir-card-tag">Médica geriatra, especialista en demencias</span>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>CDMX</span></div>
+    <div class="dir-links">
+      <a href="tel:5535606728" class="dir-link" target="_blank"><i class="fa-solid fa-phone"></i> 5535606728</a>
+      <a href="mailto:geriatriajimenez@gmail.com" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">María Elena Álvarez Cervantes</h3>
+    <span class="dir-card-tag">Geriatría, Alta Especialidad en envejecimiento cognitivo y demencias</span>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Holbein 217, despacho 201, Col. Noche Buena, C.P. 03720, Benito Juárez, Ciudad de México, CDMX</span></div>
+    <div class="dir-links">
+      <a href="tel:5523302862" class="dir-link" target="_blank"><i class="fa-solid fa-phone"></i> 5523302862</a>
+      <a href="mailto:malena120489@gmail.com" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://www.linkedin.com/search/results/all/?keywords=María Elena Álvarez Cervantes" target="_blank" class="dir-link"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">Christian Omar Toledo Larriva</h3>
+    <span class="dir-card-tag">Geriatría</span>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Av. Insurgentes Sur 1480</span></div>
+    <div class="dir-links">
+      <a href="tel:5541937708" class="dir-link" target="_blank"><i class="fa-solid fa-phone"></i> 5541937708</a>
+      <a href="https://www.instagram.com/toledolarriva" target="_blank" class="dir-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">Karla Patricia Gutiérrez Sánchez</h3>
+    <span class="dir-card-tag">Psiquiatra/Psicogeriatra</span>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Narvarte Oriente, Ángeles del Pedregal</span></div>
+    <div class="dir-links">
+      <a href="tel:5559523679" class="dir-link" target="_blank"><i class="fa-solid fa-phone"></i> 5559523679</a>
+      <a href="mailto:guskgin@outlook.es" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">Juan Francisco Flores Vázquez</h3>
+    <span class="dir-card-tag">Psiquiatra especialista en demencias</span>
+    <div class="dir-links">
+      <a href="mailto:jfflores@inger.gob.mx" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">Eduardo Sosa Tinoco</h3>
+    <span class="dir-card-tag">Geriatra /medicina interna</span>
+    <div class="dir-links">
+      <a href="tel:5531946256" class="dir-link" target="_blank"><i class="fa-solid fa-phone"></i> 5531946256</a>
+      <a href="mailto:med.eduardo.sosa.tinoco@gmail.com" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://www.linkedin.com/search/results/all/?keywords=Eduardo sosa tinoco" target="_blank" class="dir-link"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      <a href="https://www.instagram.com/med.esosatinoco" target="_blank" class="dir-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      <a href="https://www.facebook.com/search/top?q=MED Eduardo sosa tinoco" target="_blank" class="dir-link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">Yamileth Villarreal</h3>
+    <span class="dir-card-tag">Gerontologa</span>
+    <div class="dir-links">
+      <a href="mailto:yamivilo.geronto@gmail.com" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://www.instagram.com/yamigerontologa" target="_blank" class="dir-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      <a href="https://www.facebook.com/search/top?q=Gerontologa Yamileth Villarreal" target="_blank" class="dir-link"><i class="fa-brands fa-facebook"></i> Facebook</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">Karen Castillo Hernández</h3>
+    <span class="dir-card-tag">Nutrición</span>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Av. Cuahtemoc #53, Barrio San Pedro, Xochimilco</span></div>
+    <div class="dir-links">
+      <a href="tel:5610325837" class="dir-link" target="_blank"><i class="fa-solid fa-phone"></i> 5610325837</a>
+      <a href="mailto:nutrikarencas@gmail.com" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://www.instagram.com/nutrikarencaas" target="_blank" class="dir-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">Alejandra Agonizante</h3>
+    <span class="dir-card-tag">Licenciada en Nutrición</span>
+    <div class="dir-links">
+      <a href="tel:5510055168" class="dir-link" target="_blank"><i class="fa-solid fa-phone"></i> 5510055168</a>
+      <a href="mailto:alejandra.agonizante.nutri@hotmail.com" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://www.instagram.com/agonutri" target="_blank" class="dir-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">Denisse Hernández.</h3>
+    <span class="dir-card-tag">Nutrióloga</span>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Av Miguel Hidalgo 128, San Lucas, Coyoacán, 04030 Ciudad de México, CDMX</span></div>
+    <div class="dir-links">
+      <a href="tel:5547724525" class="dir-link" target="_blank"><i class="fa-solid fa-phone"></i> 5547724525</a>
+      <a href="https://www.instagram.com/NutDen" target="_blank" class="dir-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">Camila Navarrete Ruiz</h3>
+    <span class="dir-card-tag">Nutriólogo clínico</span>
+    <div class="dir-links">
+      <a href="tel:5646440005" class="dir-link" target="_blank"><i class="fa-solid fa-phone"></i> 5646440005</a>
+      <a href="mailto:camila.anr@hotmail.com" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">Diana Laura Estrada</h3>
+    <span class="dir-card-tag">Nutriologa Vegetariana (experta en Dietas basadas en plantas)</span>
+    <div class="dir-links">
+      <a href="tel:5533789146" class="dir-link" target="_blank"><i class="fa-solid fa-phone"></i> 5533789146</a>
+      <a href="mailto:nutriologalauraestrada@gmail.com" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://www.instagram.com/nut.lau_estrada" target="_blank" class="dir-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+    </div>
+  </div>
+  <div class="dir-card">
+    <h3 class="dir-card-title">María Guadalupe Saldaña</h3>
+    <span class="dir-card-tag">Fisioterapeuta especialista en demencias</span>
+    <div class="dir-address"><i class="fa-solid fa-location-dot"></i> <span>Coyoacan, CDMX</span></div>
+    <div class="dir-links">
+      <a href="tel:5574214365" class="dir-link" target="_blank"><i class="fa-solid fa-phone"></i> 5574214365</a>
+      <a href="mailto:mg.fisiogeriatrica@gmail.com" class="dir-link"><i class="fa-solid fa-envelope"></i> Correo</a>
+      <a href="https://www.linkedin.com/in/maría-guadalupe-saldaña-49475124a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="dir-link"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      <a href="https://www.instagram.com/mariasaldana_ft?stkn=MXNuMGhuZXVxbGx4Zg==" target="_blank" class="dir-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+    </div>
+  </div>
+</div>
+      <p class="dir-no-results" id="dirNoResultsExpertos">No encontramos resultados con ese término.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============ FOOTER ============ -->
+<footer class="pt-5 pb-4" id="footer">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-6" style="margin: auto 0px;">
+        <h2>¿Quieres formar parte de Alzheimer Aprende y Actúa?</h2>
+        <p>Escríbenos por cualquiera de estos canales y te compartimos cómo sumarte como aliado, ponente o sede.</p>
+      </div>
+      <div class="col-lg-4 d-flex flex-column align-items-lg-end gap-3" style="margin: auto 0px;">
+        <div class="d-flex gap-2 mb-5">
+          <a href="#" class="back-top" style="padding: 10px;"><i class="fa-solid fa-globe" style="margin: 10px;"></i>Alzheimer México</a>
+          <a href="#" class="back-top" style="padding: 10px;"><i class="fa-solid fa-heart-pulse" style="margin: 10px;"></i>Red Alzheimer</a>
+        </div>
+      </div>
+      <div class="col-lg-2 d-flex flex-column align-items-lg-end gap-3" style="margin: auto 0px;">
+        <div class="d-flex gap-2 mb-5">
+          <a href="https://wa.me/525525152218" class="back-top" style="padding: 10px;"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.facebook.com/alzheimermexico/" class="back-top" style="padding: 10px;"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/alzheimermex/" class="back-top" style="padding: 10px;"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@alzheimermx/" class="back-top" style="padding: 10px;"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr style="border-color:rgba(255,255,255,.1); margin:32px 0 16px;">
+    <p class="footer-fine mb-0">Sitio desarrollado por 3Clue · v1.0 · 2026 · Alzheimer México, A.C. Todos los derechos reservados. <a href="aviso-de-privacidad">Aviso de privacidad.</a> <a href="#">Términos de uso.</a></p>
+  </div>
+</footer>
+
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/525525152218" class="wa-float" aria-label="Escríbenos por WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, once: true, offset: 60 });
+
+  // Elementos de la navegación
+  const nav = document.getElementById('aaaNav');
+  const mainLogo = document.getElementById('mainLogo');
+
+  // Nav solid on scroll y cambio de Logo
+  const onScroll = () => {
+    if (window.scrollY > 40) {
+      nav.classList.add('is-solid');
+      mainLogo.src = 'img/logo-aaa-2026.png';
+    } else {
+      nav.classList.remove('is-solid');
+      mainLogo.src = 'img/logo-aaa-2026-blanco.png';
+    }
+  };
+
+  document.addEventListener('scroll', onScroll);
+  onScroll();
+
+  // Close mobile menu after clicking a link (excluding dropdown toggles)
+  document.querySelectorAll('#navMenu a:not(.dropdown-toggle)').forEach(link => {
+    link.addEventListener('click', () => {
+      const menu = document.getElementById('navMenu');
+      if (menu.classList.contains('show')) {
+        bootstrap.Collapse.getOrCreateInstance(menu).hide();
+      }
+    });
+  });
+
+  // ===== Directorio: tabs =====
+  const tabBtns = document.querySelectorAll('.dir-tab-btn');
+  const panels = document.querySelectorAll('.dir-panel');
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabBtns.forEach(b => b.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.target).classList.add('active');
+      document.getElementById('dirSearchInput').value = '';
+      filterDirectory('');
+    });
+  });
+
+  // ===== Directorio: buscador =====
+  const searchInput = document.getElementById('dirSearchInput');
+  function filterDirectory(term){
+    term = term.trim().toLowerCase();
+    const activePanel = document.querySelector('.dir-panel.active');
+
+    // Tarjetas individuales
+    let anyVisible = false;
+    activePanel.querySelectorAll('.dir-card:not(.dir-card-empty)').forEach(card => {
+      const match = card.textContent.toLowerCase().includes(term);
+      card.style.display = match ? '' : 'none';
+      if (match) anyVisible = true;
+    });
+
+    const noResultsEl = activePanel.querySelector('.dir-no-results');
+    if (noResultsEl) noResultsEl.style.display = (term !== '' && !anyVisible) ? 'block' : 'none';
+  }
+  searchInput.addEventListener('input', (e) => filterDirectory(e.target.value));
+  // Inicializar tooltips de Bootstrap
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+</body>
+</html>

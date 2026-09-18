@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alzheimer Aprende y Actúa 2026 · Derribando los muros de las demencias</title>
+<meta name="description" content="Alzheimer Aprende y Actúa 2026: un programa para reconocer las señales, entender la enfermedad y actuar a tiempo frente a las demencias.">
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<!-- AOS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+<!-- Google Fonts: Poppins y Fraunces -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css?v2">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7SMK87RWYH"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-7SMK87RWYH');
+</script>
+<style>
+  .bordes{
+    border-radius: 15px;
+  }
+</style>
+
+
+
+</head>
+<body>
+
+
+<!-- ============ NAV ============ -->
+<header class="aaa-nav" id="aaaNav">
+  <nav class="navbar navbar-expand-lg container">
+    <a class="navbar-brand aaa-logotype" href="index.html">
+      <img src="img/logo-aaa-2026-blanco.png" width="120px" alt="Logo" id="mainLogo">
+    </a>
+    
+    <button class="navbar-toggler d-flex d-lg-none align-items-center gap-1 glass-light border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú" style="border-radius: 999px;">
+      <span class="navbar-toggler-text d-lg-none ps-2">Menú</span>
+      <div class="d-flex flex-column justify-content-center pe-1">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </div>
+    </button>
+    
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link aaa-nav-link" href="directorio-aaa">Directorio Alzheimer</a></li>
+        <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="El día Lunes podrás acceder a esta sección">
+          <a class="nav-link aaa-nav-link" href="#" style="pointer-events: none; opacity: 0.5;">Material descargable</a>
+        </li>
+        <li class="nav-item"><a class="nav-link aaa-nav-link" href="mas-aaa">Más de AAA</a></li>
+        <li class="nav-item"><a class="nav-link aaa-nav-link" href="index.html#footer">Forma parte de AAA</a></li>
+        <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a class="btn-aaa-outline" href="programa-aaa2026.pdf">Programa</a></li>
+        <li class="nav-item me-lg-3 mb-2 mb-lg-0">
+          <a href="javascript:history.back()" class="btn" style="background-color: white; color: #723889; border: 2px solid #723889; border-radius: 999px; font-weight: 600; padding: 0.4rem 1.2rem; display: inline-flex; align-items: center; gap: 8px;">
+            <i class="fa-solid fa-arrow-left"></i> Regresar
+          </a>
+        </li>
+        
+        <li class="nav-item dropdown ms-lg-2 mt-3 mt-lg-0">
+          <a class="nav-link aaa-nav-link dropdown-toggle d-inline-flex align-items-center" href="#" id="hamburguesaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="d-lg-none me-2">Más opciones</span>
+            <i class="fa-solid fa-bars"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end mobile-scroll-dropdown glass-light" aria-labelledby="hamburguesaDropdown">
+            <li><a class="dropdown-item" href="index.html">Inicio</a></li>
+            <li><a class="dropdown-item" href="que-es-aaa">¿Qué es AAA?</a></li>
+            <li><a class="dropdown-item" href="index.html#muros">Los muros de las demencias</a></li>
+            <li><a class="dropdown-item" href="muro-normalizacion">Muro 1</a></li>
+            <li><a class="dropdown-item" href="muro-paraque">Muro 2</a></li>
+            <li><a class="dropdown-item" href="muro-babel">Muro 3</a></li>
+            <li><a class="dropdown-item" href="muro-estigma-miedo">Muro 4</a></li>
+            <li><a class="dropdown-item" href="mas-aaa">Más de AAA</a></li>
+            <li><a class="dropdown-item" href="material-descargable">Matrial descargable</a></li>
+            <li><a class="dropdown-item" href="directorio-aaa">Directorio AAA</a></li>
+            <li><a class="dropdown-item" href="index.html#footer">Forma parte de AAA</a></li>
+            <li><a class="dropdown-item" href="index.html#aliados">Aliados</a></li>
+            <li><a class="dropdown-item" href="index.html#footer">Contacto</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="hero-grain"></div>
+  <div class="hero-grain"></div>
+  <div class="container hero-content">
+    
+    <div class="row justify-content-center text-center mb-4">
+      <div class="col-12 p-0 d-flex justify-content-center" data-aos="zoom-in" data-aos-duration="900">
+        <div class="hero-logo-mask w-100">
+          <video autoplay muted loop playsinline poster="img/logo-aaa-2026-blanco.svg">
+            <source src="img/video.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-12 hoy-block" data-aos="fade-up" data-aos-delay="250">
+        
+        <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-4 w-100">
+          <div class="text-center text-lg-start">
+            <span class="hoy-label d-block">EN VIVO HOY</span>
+            <p class="hoy-day-caption mb-0 mx-auto mx-lg-0" style="max-width:22ch;">Entra al día en curso y sigue el material en vivo.</p>
+          </div>
+          
+          <div class="hoy-times-grid">
+            <a href="#dia-1" class="hoy-day-wrap text-decoration-none text-center">
+              <span class="hoy-day">10:00<br class="d-md-none"> hrs</span>
+            </a>
+            <a href="#dia-2" class="hoy-day-wrap text-decoration-none text-center">
+              <span class="hoy-day">13:00<br class="d-md-none"> hrs</span>
+            </a>
+            <a href="#dia-3" class="hoy-day-wrap text-decoration-none text-center">
+              <span class="hoy-day">16:00<br class="d-md-none"> hrs</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <a href="#que-es" class="scroll-cue" aria-label="Bajar a la siguiente sección">
+    <i class="fa-solid fa-chevron-down fa-lg"></i>
+  </a>
+</section>
+
+<!-- ============ QUÉ ES AAA ============ -->
+<section class="section" id="que-es">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6" data-aos="fade-up">
+        <h2 class="mb-4" style="font-size:clamp(1.8rem,3vw,2.6rem);">
+          Qué es <span class="font-accent" style="color:var(--aaa-purple);">Alzheimer</span> Aprende y Actúa
+        </h2>
+        <p class="mb-3"><stong>Alzheimer Aprende y Actúa</stong> es una iniciativa anual de <strong>Alzheimer México, I.A.P./</strong>, que desde su creación busca acercar <strong>información accesible, actualizada y empática sobre las demencias a personas cuidadoras, familiares y público en general.</strong> A lo largo de sus ediciones, el evento se ha consolidado como un espacio gratuito de formación, reflexión y vinculación interdisciplinaria, donde expertos, cuidadores, familiares y público general comparten conocimientos y experiencias en torno a las demencias.</p>
+
+        <p class="mb-3">Su propósito es <strong>promover la prevención, la sensibilización y la detección oportuna de las demencias</strong>, fomentando una cultura de cuidado integral que reconozca los derechos, la dignidad y la participación activa de las personas mayores.</p>
+
+        <p class="mb-3">Este 2026, bajo el tema <strong>"Derribando los Muros de las Demencias"</strong>, el programa se construye alrededor de cuatro muros que representan las principales barreras que impiden llegar a tiempo a un diagnóstico: <strong>la normalización de las señales, la pregunta de "¿para qué?", la dificultad para traducir la ciencia a la vida diaria, y el estigma y el miedo.</strong></p><br>
+        <a href="que-es-aaa" class="btn-aaa-primary glass-light text-white" style="background:var(--aaa-purple); border-color:var(--aaa-purple);">Ver años pasados</a>
+      </div>
+      <div class="col-lg-6" data-aos="fade-down">
+        <img src="img/que-es-aaa.webp" width="100%" class="glass-dark mt-5" style="border-radius: 50px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOS MUROS INTRO ============ -->
+<section class="section" id="muros">
+  <div class="container">
+    <div class="row text-center mb-5 justify-content-center">
+      <div class="col-lg-12" data-aos="fade-up">
+        <h2 style="font-size:clamp(1.8rem,3vw,2.6rem); margin-bottom: 20px;">Los muros de las <span class="font-accent">demencias</span></h2>
+        <p class="mx-auto-p">Hablar de demencias en México es hablar de uno de los grandes retos que acompaña al envejecimiento de nuestra población. Con frecuencia, el camino hacia un diagnóstico oportuno comienza mucho antes de llegar a una consulta especializada: las primeras señales pueden confundirse con la edad, persiste la idea de que "no hay nada que hacer", el lenguaje médico puede ser difícil de comprender, y el miedo o el estigma llevan a las familias a posponer la búsqueda de respuestas.</p>
+
+         <p class="mx-auto-p">A estas barreras las llamamos muros invisibles: no dependen de la tecnología ni de los servicios médicos disponibles, sino de cómo reconocemos las señales, buscamos ayuda, comprendemos un diagnóstico y tomamos decisiones.</p>
+
+         <p class="referencia">Este año, en Alzheimer Aprende y Actúa, identificamos cuatro de estos muros y trabajamos, con la voz de especialistas de distintas disciplinas, para comenzar a derribarlos.</p>
+      </div>
+    </div>
+
+    <div class="row align-items-center g-5">
+      
+      <!-- Lado Izquierdo: Video -->
+      <div class="col-lg-7" data-aos="fade-up">
+        <div class="video-card h-100" style="background-image: url(img/proximo.webp);background-size: cover;">
+          <span class="play-btn"><i class="fa-solid fa-play"></i></span>
+          <h3 style="position:absolute;top: 60%;text-align: center;font-weight: 700;color: white;">Podras verlo el<br><span class="font-accent">Domingo 20</span></h3>
+        </div>
+      </div>
+
+      <!-- Lado Derecho: Lista de Ponentes -->
+      <div class="col-lg-5" data-aos="fade-down">
+        <h4 class="mb-4" style="color:var(--aaa-teal-dark);">Nuestros Ponentes</h4>
+        
+        <div class="d-flex flex-column gap-2">
+          <!-- Ponente 1 -->
+          <div class="speaker-item" data-bs-toggle="modal" data-bs-target="#ponenteModal1">
+            <img src="img/ponentes/marco.webp" alt="Ponente 1" class="speaker-img">
+            <div class="speaker-info">
+              <h5 class="mb-0 font-accent">Mtro. Marco A. Murillo </h5>
+              <span class="small text-muted fw-semibold">Anfitrión</span>
+            </div>
+          </div>
+          
+          <!-- Ponente 2 -->
+          <div class="speaker-item" data-bs-toggle="modal" data-bs-target="#ponenteModal2">
+            <img src="img/ponentes/guadalupe.webp" alt="Ponente 2" class="speaker-img">
+            <div class="speaker-info">
+              <h5 class="mb-0 font-accent">L.FT. Guadalupe Saldaña</h5>
+              <span class="small text-muted fw-semibold">Moderador</span>
+            </div>
+          </div>
+          
+          <!-- Ponente 3 -->
+          <div class="speaker-item" data-bs-toggle="modal" data-bs-target="#ponenteModal3">
+            <img src="img/ponentes/samary.webp" alt="Ponente 3" class="speaker-img">
+            <div class="speaker-info">
+              <h5 class="mb-0 font-accent">L.N. Samary Coronel</h5>
+              <span class="small text-muted fw-semibold">Moderador</span>
+            </div>
+          </div>
+
+          <!-- Ponente 4 -->
+          <div class="speaker-item" data-bs-toggle="modal" data-bs-target="#ponenteModal4">
+            <img src="img/ponentes/yamileth.webp" alt="Ponente 4" class="speaker-img">
+            <div class="speaker-info">
+              <h5 class="mb-0 font-accent">l..G. Yamileth Villarreal </h5>
+              <span class="small text-muted fw-semibold">Experto</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MURO 1: TERRACOTA ============ -->
+<section class="muro-band muro-1-sec" id="muro-1">
+  <div class="muro-head-bar">
+    <div class="container">
+      <span class="muro-tag"><span class="num">I</span> Muro de la Normalización</span>
+    </div>
+  </div>
+  <div class="container section-sm position-relative">
+    <span class="muro-wall-mark">01</span>
+    <div class="row align-items-center g-4">
+      <div class="col-lg-8 muro-text-glass" data-aos="fade-up">
+        <h3 class="muro-title mb-1">Muro de la <span class="font-accent">Normalización</span></h3>
+        <p class="muro-sub mb-3">Redefiniendo las señales de alerta</p>
+        <p class="mb-4">Es esperable que, con la edad, la velocidad de procesamiento disminuya o cueste más recordar un nombre, sin que esto afecte las funciones diarias. El problema surge cuando estas señales, cambios de personalidad, apatía, dificultades de juicio— se descartan como "cosas de la edad" sin ser, en realidad, alertas tempranas.</p>
+
+        <p class="mb-4">Este fenómeno tiene nombre: <strong>edadismo</strong>. La OMS lo define como el conjunto de estereotipos y prejuicios que presuponen que todas las personas de una edad determinada piensan, se comportan o tienen las mismas capacidades y señala que una de cada dos personas en el mundo tiene actitudes edadistas. 
+        EL edadismo puede llevar al propio personal de salud a asumir que ciertos padecimientos son "normales" para la edad, evitando intervenciones necesarias y las personas mayores pueden interiorizar esos estereotipos, asumiendo que sus síntomas "no merecen" atención.</p>
+
+        <p style="font-size:8px;">Fuentes: Organización Mundial de la Salud (OMS), campaña mundial contra el edadismo; "Combatir el edadismo: conciencia y mejores prácticas en la atención de salud de personas mayores", Scielo México (2024).</p>
+
+        <!-- Fila con espacio (gutter) g-3 -->
+        <div class="row mb-4 g-3">
+          <div class="col-lg-3 col-6">
+            <a href="muro-normalizacion.html#envejecer">
+              <img src="img/miniaturas/02.jpg" width="100%" class="bordes">
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <a href="muro-normalizacion.html#personalidad">
+              <img src="img/miniaturas/03.jpg" width="100%" class="bordes">
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <a href="muro-normalizacion.html#olvido">
+              <img src="img/miniaturas/04.jpg" width="100%" class="bordes">
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <a href="muro-normalizacion.html#decisiones">
+              <img src="img/miniaturas/05.jpg" width="100%" class="bordes">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MURO 2: NARANJA/AMARILLO ============ -->
+<section class="muro-band muro-2-sec" id="muro-2">
+  <div class="muro-head-bar">
+    <div class="container">
+      <span class="muro-tag"><span class="num">II</span> Muro del "¿Para qué?"</span>
+    </div>
+  </div>
+  <div class="container section-sm position-relative">
+    <span class="muro-wall-mark">02</span>
+    <div class="row align-items-center g-4">
+      <div class="col-lg-8 muro-text-glass" data-aos="fade-up">
+        <h3 class="muro-title mb-1">Muro del <span class="font-accent">"¿Para qué?"</span></h3>
+        <p class="muro-sub mb-3">El valor de la certeza</p>
+        <p class="mb-4">El nihilismo terapéutico consiste en negar intervenciones basándose en ideas como "ya no hay nada que hacer" y es más común de lo deseable incluso entre profesionales del ámbito sociosanitario, lo que agrava el problema porque a veces es el propio sistema de salud el que transmite ese mensaje de resignación.</p>
+
+        <p class="mb-4">El error central es <strong>equiparar la ausencia de cura con la ausencia de intervenciones útiles</strong>. Según la OMS, aunque no existe un tratamiento que cure la demencia, sí hay mucho por hacer: rehabilitación, psicoeducación, actividad física, estimulación cognitiva y apoyo a los cuidadores. 
+        Como dato importante, los cuidadores que no han dejado a un lado su propio proyecto de vida, que conservan esperanza hacia el futuro, reportan menos sobrecarga que quienes sienten que todo se detuvo.</p>
+
+        <p style="font-size:8px;">Fuentes: Organización Mundial de la Salud (OMS), guía de intervenciones para demencia; Cerquera et al., "Percepción de calidad de vida en cuidadores de pacientes con demencia", Revista Científica de la Sociedad Española de Enfermería Neurológica (2017).</p>
+        
+
+        <!-- Fila con espacio (gutter) g-3 -->
+        <div class="row mb-4 g-3">
+          <div class="col-lg-3 col-6">
+            <a href="muro-paraque.html#nihilismo">
+              <img src="img/miniaturas/06.jpg" width="100%" class="bordes">
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <a href="muro-paraque.html#cambia">
+              <img src="img/miniaturas/07.jpg" width="100%" class="bordes">
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <a href="muro-paraque.html#importa">
+              <img src="img/miniaturas/08.jpg" width="100%" class="bordes">
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <a href="muro-paraque.html#cambios">
+              <img src="img/miniaturas/09.jpg" width="100%" class="bordes">
+            </a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MURO 3: VERDE SALVIA ============ -->
+<section class="muro-band muro-3-sec" id="muro-3">
+  <div class="muro-head-bar">
+    <div class="container">
+      <span class="muro-tag"><span class="num">III</span> Muro de Babel</span>
+    </div>
+  </div>
+  <div class="container section-sm position-relative">
+    <span class="muro-wall-mark">03</span>
+    <div class="row align-items-center g-4">
+      <div class="col-lg-8 muro-text-glass" data-aos="fade-up">
+        <h3 class="muro-title mb-1">Muro de <span class="font-accent">Babel</span></h3>
+        <p class="muro-sub mb-3">Traducir la ciencia a la vida diaria</p>
+        <p class="mb-4">La alfabetización en salud es la capacidad de obtener, entender y utilizar información para tomar decisiones informadas sobre la propia salud. El problema no es que las familias "no entiendan" es que el lenguaje médico rara vez está diseñado para ser entendido.</p>
+
+        <p class="mb-4">Un dato revelador: muchos adultos mayores salen de consulta diciendo "sí entendí", aunque por dentro sigan las dudas no por falta de interés, sino por vergüenza o miedo a "molestar" al profesional de salud. Comunicar va más allá de hablar: implica asegurarse de que la otra persona realmente comprendió lo que necesita hacer para cuidar su salud.</p>
+
+        <p style="font-size:8px;">Fuentes: "Cuando el paciente asiente pero no entendió: comunicación en salud y alfabetización en adultos mayores", HC Gallery PR (2026); Organización Mundial de la Salud, definición de alfabetización en salud.</p>
+        
+
+        <!-- Fila con espacio (gutter) g-3 -->
+        <div class="row mb-4 g-3">
+          <div class="col-lg-3 col-6">
+            <a href="muro-babel.html#barrera">
+              <img src="img/miniaturas/10.jpg" width="100%" class="bordes">
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <a href="muro-babel.html#biomarcador">
+              <img src="img/miniaturas/11.jpg" width="100%" class="bordes">
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <a href="muro-babel.html#imagen">
+              <img src="img/miniaturas/12.jpg" width="100%" class="bordes">
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <a href="muro-babel.html#perdido" >
+              <img src="img/miniaturas/13.jpg" width="100%" class="bordes">
+            </a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MURO 4: ROSA VIEJO ============ -->
+<section class="muro-band muro-4-sec" id="muro-4">
+  <div class="muro-head-bar">
+    <div class="container">
+      <span class="muro-tag"><span class="num">IV</span> Muro del Estigma y el Miedo</span>
+    </div>
+  </div>
+  <div class="container section-sm position-relative">
+    <span class="muro-wall-mark">04</span>
+    <div class="row align-items-center g-4">
+      <div class="col-lg-8 muro-text-glass" data-aos="fade-up">
+        <h3 class="muro-title mb-1">Muro del <span class="font-accent">Estigma y el Miedo</span></h3>
+        <p class="muro-sub mb-3">Visibilizar para poder actuar</p>
+        <p class="mb-4">Según el Informe Mundial sobre el Alzheimer 2024 de Alzheimer's Disease International (encuesta a más de 40,000 personas en 166 países, en colaboración con la London School of Economics), el 88% de las personas que viven con demencia reportan haber sufrido discriminación. Y un dato que golpea de forma distinta: 65% del personal de salud y de cuidado todavía cree, de forma equivocada, que la demencia es una parte normal del envejecimiento.</p>
+
+        <p class="mb-4">El estigma no opera de una sola manera: existe un estigma internalizado (la propia persona se aísla por vergüenza anticipada), un estigma público (creer que ya "no pueden aportar nada"), y uno que afecta a cuidadores y familiares directamente ("me da vergüenza hablar de esto con mis amigos"). El costo es doble — aísla a quien vive con demencia, y aísla también a quien cuida.</p>
+
+        <p style="font-size:8px;">Fuentes: Alzheimer's Disease International, World Alzheimer Report 2024: Global changes in attitudes to dementia, en colaboración con la LSE.</p>
+        
+
+        <!-- Fila con espacio (gutter) g-3 -->
+        <div class="row mb-4 g-3">
+          <div class="col-lg-3 col-6">
+            <a href="muro-estigma-miedo.html#estigma">
+              <img src="img/miniaturas/14.jpg" width="100%" class="bordes">
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <a href="muro-estigma-miedo.html#silencio" >
+              <img src="img/miniaturas/15.jpg" width="100%" class="bordes">
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <a href="muro-estigma-miedo.html#agotamiento" >
+              <img src="img/miniaturas/16.jpg" width="100%" class="bordes">
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <a href="muro-estigma-miedo.html#apoyo" >
+              <img src="img/miniaturas/17.jpg" width="100%" class="bordes">
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <a href="muro-estigma-miedo.html#cuidan" >
+              <img src="img/miniaturas/18.jpg" width="100%" class="bordes">
+            </a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ALIADOS ============ -->
+<section class="section allies-section" id="aliados">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-6" data-aos="fade-up">
+        <h2 style="font-size:clamp(1.6rem,2.6vw,2.2rem);">Nuestros aliados</h2>
+      </div>
+    </div>
+    <div class="row g-3 justify-content-center mb-4">
+      <div class="col-4 col-md-2" data-aos="fade-up" data-aos-delay="0"><div class="ally-logo"><a href="https://senosiain.mx"><img src="img/logos/senosiain.webp"></a></div></div>
+      <div class="col-4 col-md-2" data-aos="fade-up" data-aos-delay="50"><div class="ally-logo"><a href="https://mx.lilly.com/tienda"><img src="img/logos/lilly.webp"></a></div></div>
+      <div class="col-4 col-md-2" data-aos="fade-up" data-aos-delay="100"><div class="ally-logo"><a href="https://www.fundaciontelmextelcel.org"><img src="img/logos/telmex.webp"></a></div></div>
+      <div class="col-4 col-md-2" data-aos="fade-up" data-aos-delay="150"><div class="ally-logo"><a href="https://www.cobijoysonrisas.org/"><img src="img/logos/cobijo.webp"></a></div></div>
+      
+    </div>
+    <div class="row g-3 justify-content-center mb-4">
+      <div class="col-4 col-md-2" data-aos="fade-up" data-aos-delay="200"><div class="ally-logo"><a href="https://nativa5.com"><img src="img/logos/nativa.webp"></a></div></div>
+      <div class="col-4 col-md-2" data-aos="fade-up" data-aos-delay="0"><div class="ally-logo"><a href="https://nefintec.mx/"><img src="img/logos/nefintec.webp"></a></div></div>
+      <div class="col-4 col-md-2" data-aos="fade-up" data-aos-delay="50"><div class="ally-logo"><a href="https://fundacionmarcomurillo.org"><img src="img/logos/marco.webp"></a></div></div>
+    </div>
+    <p class="text-center small mb-0 mx-auto-p" style="max-width:60ch; opacity:.7;" data-aos="fade-up">
+      Agradecemos a las instituciones y empresas que hacen posible este programa y que ponen a disposición material adicional para quienes buscan más apoyo.
+    </p>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER CTA ============ -->
+<section class="section newsletter-band" id="programa">
+  <div class="container position-relative">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-4" data-aos="fade-up">
+        <h2 class="mb-3" style="font-size:clamp(1.6rem,2.6vw,2.2rem);">¿Quieres recibir todo el material descargable y más en tu correo?</h2>
+        <p class="mb-4" style="color:rgba(255,255,255,.85);">Un correo al mes con las grabaciones, las guías de cada muro y los próximos eventos de Alzheimer México.</p>
+      </div>
+      <div class="col-lg-4" data-aos="fade-up">
+        <div class="d-flex align-items-center gap-3">
+          <button class="newsletter-yes">SÍ</button>
+          <a href="aviso-de-privacidad" class="small text-white-50">Ver cómo usamos tus datos</a>
+        </div>
+      </div>
+      <div class="col-lg-4 d-flex justify-content-lg-end" data-aos="fade-down">
+        <div class="mosaic">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="pt-5 pb-4" id="footer">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-6" style="margin: auto 0px;">
+        <h2>¿Quieres formar parte de Alzheimer Aprende y Actúa?</h2>
+        <p>Escríbenos por cualquiera de estos canales y te compartimos cómo sumarte como aliado, ponente o sede.</p>
+      </div>
+      <div class="col-lg-4 d-flex flex-column align-items-lg-end gap-3" style="margin: auto 0px;">
+        <div class="d-flex gap-2 mb-5">
+          <a href="#" class="back-top" style="padding: 10px;"><i class="fa-solid fa-globe" style="margin: 10px;"></i>Alzheimer México</a>
+          <a href="#" class="back-top" style="padding: 10px;"><i class="fa-solid fa-heart-pulse" style="margin: 10px;"></i>Red Alzheimer</a>
+        </div>
+      </div>
+      <div class="col-lg-2 d-flex flex-column align-items-lg-end gap-3" style="margin: auto 0px;">
+        <div class="d-flex gap-2 mb-5">
+          <a href="https://wa.me/525525152218" class="back-top" style="padding: 10px;"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.facebook.com/alzheimermexico/" class="back-top" style="padding: 10px;"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/alzheimermex/" class="back-top" style="padding: 10px;"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@alzheimermx/" class="back-top" style="padding: 10px;"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr style="border-color:rgba(255,255,255,.1); margin:32px 0 16px;">
+    <p class="footer-fine mb-0">Sitio desarrollado por 3Clue · v1.0 · 2026 · Alzheimer México, A.C. Todos los derechos reservados. <a href="aviso-de-privacidad">Aviso de privacidad.</a> <a href="#">Términos de uso.</a></p>
+  </div>
+</footer>
+
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/525525152218" class="wa-float" aria-label="Escríbenos por WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+
+<!-- ============ MODALES DE PONENTES ============ -->
+<!-- Modal Ponente 1 -->
+<div class="modal fade" id="ponenteModal1" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <img src="img/ponentes/marco.webp" width="200" height="200" class="rounded-circle" style="object-fit:cover;">
+          <div>
+            <h5 class="mb-0 font-accent" style="color:var(--aaa-purple-dark);">Mtro. Marco A. Murillo</h5>
+            <span class="text-muted small fw-semibold">Anfitrión</span>
+          </div>
+        </div>
+        <p class="small">Destacado directivo del sector social en México, especializado en el ámbito gerontológico y la atención integral a personas con Alzheimer y otras condiciones neurodegenerativas. Actualmente se desempeña como Presidente del Patronato de Alzheimer México, I.A.P. y Tesorero de la Federación Mexicana de Alzheimer (FEDMA). Su labor abarca la sostenibilidad institucional, procuración de fondos, alianzas estratégicas y la defensa de los derechos de las personas con demencia y sus cuidadores a nivel nacional.</p>
+        <p class="small"><i class="fa-solid fa-envelope" style="margin: 10px;"></i><a href="mailto:patronato@alzmx.org.mx" style="color: var(--aaa-purple);">patronato@alzmx.org.mx</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Ponente 2 -->
+<div class="modal fade" id="ponenteModal2" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <img src="img/ponentes/guadalupe.webp" width="200" height="200" class="rounded-circle" style="object-fit:cover;">
+          <div>
+            <h5 class="mb-0 font-accent" style="color:var(--aaa-purple-dark);">LFT. María Guadalupe Saldaña</h5>
+            <span class="text-muted small fw-semibold">Moderador</span>
+          </div>
+        </div>
+        <p class="small">Licenciada en Fisioterapia egresada de la Benemérita Universidad Autónoma de Puebla (BUAP) y actual Coordinadora de Fisioterapia en Alzheimer México, I.A.P. Es miembro de la Academia Mexicana de Geriatría y docente de Práctica Clínica en Geriatría de la Licenciatura en Fisioterapia en la Facultad de Medicina de la UNAM. Cuenta con amplia experiencia en instituciones públicas y privadas de atención al adulto mayor, así como formación especializada en Geriatría avalada por el Instituto Nacional de Geriatría (INGER) y el Consejo Mexicano de Geriatría, además de capacitación en rehabilitación cardiopulmonar por el Centro FISICOL.</p>
+        <p class="small"><i class="fa-solid fa-envelope" style="margin: 10px;"></i><a href="mailto:fisioterapia@alzmx.org.mx" style="color: var(--aaa-purple);">fisioterapia@alzmx.org.mx</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Ponente 3 -->
+<div class="modal fade" id="ponenteModal3" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <img src="img/ponentes/samary.webp" width="200" height="200" class="rounded-circle" style="object-fit:cover;">
+          <div>
+            <h5 class="mb-0 font-accent" style="color:var(--aaa-purple-dark);">L.N. Samary Coronel </h5>
+            <span class="text-muted small fw-semibold">Moderador</span>
+          </div>
+        </div>
+        <p class="small">Licenciada en Nutrición Humana por la Universidad Autónoma Metropolitana (UAM), enfocada en la atención de poblaciones vulnerables, adultos mayores y personas con demencia. En Alzheimer México, I.A.P. se ha desempeñado como Coordinadora del Área de Nutrición y Alimentación, y actualmente coordina el Área de Alianzas y Comunicación. Ha sido docente en el Instituto Mexicano de Envejecimiento Activo (IMENA), supervisora de prácticas clínicas, así como integrante del comité organizador de Alzheimer Aprende y Actúa desde 2021 y ponente en diversos foros de divulgación sobre el envejecimiento y las demencias. </p>
+        <p class="small"><i class="fa-solid fa-envelope" style="margin: 10px;"></i><a href="mailto:alianzas@alzmx.org.mx" style="color: var(--aaa-purple);">alianzas@alzmx.org.mx</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Ponente 4 -->
+<div class="modal fade" id="ponenteModal4" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <img src="img/ponentes/yamileth.webp" width="200" height="200" class="rounded-circle" style="object-fit:cover;">
+          <div>
+            <h5 class="mb-0 font-accent" style="color:var(--aaa-purple-dark);">L.G. Yamileth Villarreal </h5>
+            <span class="text-muted small fw-semibold">Experto</span>
+          </div>
+        </div>
+        <p class="small">Gerontóloga clínica por la Universidad Autónoma del Estado de México y creadora de contenido en salud en redes sociales, con una comunidad de más de medio millón de personas. </p>
+        <p class="small"><i class="fa-solid fa-envelope" style="margin: 10px;"></i><a href="mailto:correo" style="color: var(--aaa-purple);">correo</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, once: true, offset: 60 });
+
+  // Elementos de la navegación
+  const nav = document.getElementById('aaaNav');
+  const mainLogo = document.getElementById('mainLogo');
+  
+  // Nav solid on scroll y cambio de Logo
+  const onScroll = () => {
+    if (window.scrollY > 40) {
+      nav.classList.add('is-solid');
+      mainLogo.src = 'img/logo-aaa-2026.png'; // Logo oscuro al hacer scroll
+    } else {
+      nav.classList.remove('is-solid');
+      mainLogo.src = 'img/logo-aaa-2026-blanco.png'; // Logo blanco en la parte superior
+    }
+  };
+  
+  document.addEventListener('scroll', onScroll);
+  onScroll();
+
+  // Close mobile menu after clicking a link (excluding dropdown toggles)
+  document.querySelectorAll('#navMenu a:not(.dropdown-toggle)').forEach(link => {
+    link.addEventListener('click', () => {
+      const menu = document.getElementById('navMenu');
+      if (menu.classList.contains('show')) {
+        bootstrap.Collapse.getOrCreateInstance(menu).hide();
+      }
+    });
+  });
+  // Inicializar tooltips de Bootstrap
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+</body>
+</html>
